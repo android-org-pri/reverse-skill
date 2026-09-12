@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/ssrf-metadata-pivot.md` for SSRF checklists, metadata pivots, and evidence packaging.
+- Load [references/ssrf-metadata-pivot.md](references/ssrf-metadata-pivot.md) for SSRF checklists, metadata pivots, and evidence packaging.
 
 ## What To Preserve
 

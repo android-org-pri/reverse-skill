@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/oauth-oidc-chain.md` for the redirect checklist, token checklist, and evidence packaging.
+- Load [references/oauth-oidc-chain.md](references/oauth-oidc-chain.md) for the redirect checklist, token checklist, and evidence packaging.
 - If the hard part is JWT header parsing, claim normalization, key lookup, or token validation confusion after issuance, prefer `$competition-jwt-claim-confusion`.
 
 ## What To Preserve

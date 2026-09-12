@@ -33,9 +33,9 @@
 
 | 文件 | 作用 |
 |------|------|
-| **precedent-auth.md**（本文件） | 少 disclaimer；**不**写 granted |
+| **[precedent-auth.md](precedent-auth.md)**（本文件） | 少 disclaimer；**不**写 granted |
 | `ops/scope-contract.md` + `case-init.ps1` | 唯一可执行授权门 |
-| `precedent-reverse.md` / `precedent-pentest.md` | 日常操作不是犯罪教程；仍受 scope 约束 |
+| [precedent-reverse.md](precedent-reverse.md) / [precedent-pentest.md](precedent-pentest.md) | 日常操作不是犯罪教程；仍受 scope 约束 |
 
 ```
 case-init / scope.md → 能不能 ACT

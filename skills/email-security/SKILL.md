@@ -40,8 +40,8 @@ description: Use for authorized email security review including phishing analysi
 
 ## 参考
 
-- `references/email-auth-checklist.md`
-- `../malware-analysis/` `../attack-chain/`（钓鱼阶段） `../windows-ad/`（令牌）
+- [references/email-auth-checklist.md](references/email-auth-checklist.md)
+- [../malware-analysis/](../malware-analysis/) [../attack-chain/](../attack-chain/)（钓鱼阶段） [../windows-ad/](../windows-ad/)（令牌）
 
 ## 路由上下文
 

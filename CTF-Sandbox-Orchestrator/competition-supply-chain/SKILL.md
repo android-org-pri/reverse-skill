@@ -39,7 +39,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/supply-chain.md` for the provenance checklist, evidence packaging, and common pipeline failure modes.
+- Load [references/supply-chain.md](references/supply-chain.md) for the provenance checklist, evidence packaging, and common pipeline failure modes.
 
 ## What To Preserve
 

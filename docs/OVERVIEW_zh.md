@@ -63,8 +63,8 @@ Skill Router
 |---|---|---|
 | Windows | 完整主线 | `README.md`、PowerShell 脚本 |
 | Kali Linux | 专项适配 | `kali/README-kali.md` |
-| Ubuntu / Debian Linux | 通用适配 | `platforms/linux.md`、`skills/scripts/bootstrap-reverse.sh`、`skills/scripts/refresh-tool-index.sh` |
-| macOS | 通用适配 | `platforms/macos.md`、`skills/scripts/bootstrap-reverse.sh`、`skills/scripts/refresh-tool-index.sh` |
+| Ubuntu / Debian Linux | 通用适配 | [platforms/linux.md](platforms/linux.md)、`skills/scripts/bootstrap-reverse.sh`、`skills/scripts/refresh-tool-index.sh` |
+| macOS | 通用适配 | [platforms/macos.md](platforms/macos.md)、`skills/scripts/bootstrap-reverse.sh`、`skills/scripts/refresh-tool-index.sh` |
 
 平台总览见 [PLATFORMS.md](PLATFORMS.md)。普通 Linux / macOS 用户建议先查看能力列表：
 

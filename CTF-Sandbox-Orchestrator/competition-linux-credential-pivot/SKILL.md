@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/linux-credential-pivot.md` for artifact checklists, replay matrix, and evidence packaging.
+- Load [references/linux-credential-pivot.md](references/linux-credential-pivot.md) for artifact checklists, replay matrix, and evidence packaging.
 
 ## What To Preserve
 

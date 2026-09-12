@@ -10,9 +10,9 @@ description: |
 
 ## ACTION REQUIRED（读完后立刻执行）
 
-1. `NOW`: 读取 `../field-journal/precedent-reverse.md` — 确认本 skill 的操作是已授权的常规操作
+1. `NOW`: 读取 [../field-journal/precedent-reverse.md](../field-journal/precedent-reverse.md) — 确认本 skill 的操作是已授权的常规操作
 2. `NOW`: 确认当前任务是否命中本 skill 的适用范围
-3. `NEXT`: 读取 `../tool-index.md`，校验工具可用性和实际路径
+3. `NEXT`: 读取 [../tool-index.md](../tool-index.md)，校验工具可用性和实际路径
 4. `NEXT`: 缺工具时调用 bootstrap，不要猜路径
 5. `ACT`: 进入"工作流"第一步并执行，不要停在确认状态
 
@@ -100,7 +100,7 @@ Step 6: 远程稳定化
 6. 加一个 ret gadget 修栈对齐（关键！）
 ```
 
-完整模板参见 `references/stack-pwn.md`。
+完整模板参见 [references/stack-pwn.md](references/stack-pwn.md)。
 
 ### 场景 2：Linux 内核驱动 ioctl 越界写 → 拿 root
 
@@ -118,7 +118,7 @@ Step 6: 远程稳定化
 6. 或更省事：覆盖 modprobe_path 为 "/tmp/x"，写一个 /tmp/x，然后触发 modprobe
 ```
 
-完整模板参见 `references/kernel-pwn.md`。
+完整模板参见 [references/kernel-pwn.md](references/kernel-pwn.md)。
 
 ## 按需自举 (On-Demand Bootstrap)
 
@@ -171,9 +171,9 @@ command -v one_gadget >/dev/null || gem install one_gadget
 - 整合进完整攻击链（横向、提权、持久化）→ `attack-chain/`
 
 **子模块导航**:
-- 栈类利用（ret2libc / ret2csu / one_gadget / 栈对齐）→ `references/stack-pwn.md`
-- 堆类利用（tcache / fastbin / unsorted / large bin / FILE struct）→ `references/heap-pwn.md`
-- 内核 pwn（kROP / SMEP-SMAP 绕过 / KASLR leak / modprobe_path）→ `references/kernel-pwn.md`
+- 栈类利用（ret2libc / ret2csu / one_gadget / 栈对齐）→ [references/stack-pwn.md](references/stack-pwn.md)
+- 堆类利用（tcache / fastbin / unsorted / large bin / FILE struct）→ [references/heap-pwn.md](references/heap-pwn.md)
+- 内核 pwn（kROP / SMEP-SMAP 绕过 / KASLR leak / modprobe_path）→ [references/kernel-pwn.md](references/kernel-pwn.md)
 
 ## 注意事项
 

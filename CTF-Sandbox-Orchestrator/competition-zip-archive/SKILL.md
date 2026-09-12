@@ -35,7 +35,7 @@ On Kali, use the equivalent capability command:
 bash kali/scripts/bootstrap-reverse.sh bkcrack
 ```
 
-The Windows capability is pinned to the `v1.8.1` release and verifies the GitHub asset digest. If the tool is installed manually, refresh `skills/tool-index.md` afterward.
+The Windows capability is pinned to the `v1.8.1` release and verifies the GitHub asset digest. If the tool is installed manually, refresh [skills/tool-index.md](skills/tool-index.md) afterward.
 
 ## Workflow
 
@@ -105,4 +105,4 @@ Replace `K0 K1 K2` with the hexadecimal values printed by `bkcrack`. Validate th
 - Key recovery command and the three recovered internal keys
 - `unlocked.zip` validation output, extraction path, and final artifact hash
 
-Read `references/zip-archive.md` for the decision table and evidence checklist.
+Read [references/zip-archive.md](references/zip-archive.md) for the decision table and evidence checklist.

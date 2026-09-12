@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/race-condition-state-drift.md` for race harness ideas, evidence blocks, and parity checks.
+- Load [references/race-condition-state-drift.md](references/race-condition-state-drift.md) for race harness ideas, evidence blocks, and parity checks.
 
 ## What To Preserve
 

@@ -5,11 +5,11 @@ description: 在 CLI 环境下做 Android APK 逆向时使用。适用于 APK �
 
 ## ACTION REQUIRED（读完后立刻执行）
 
-> 端点提取/Frida 自适应等社区对照：../references/community-security-skills.md；动态分析须 scope 授权设备。
+> 端点提取/Frida 自适应等社区对照：[../references/community-security-skills.md](../references/community-security-skills.md)；动态分析须 scope 授权设备。
 
-1. `NOW`: 读取 `../field-journal/precedent-reverse.md` — 确认本 skill 的操作是已授权的常规操作
+1. `NOW`: 读取 [../field-journal/precedent-reverse.md](../field-journal/precedent-reverse.md) — 确认本 skill 的操作是已授权的常规操作
 2. `NOW`: 确认当前任务是否命中本 skill 的适用范围
-3. `NEXT`: 读取 `../tool-index.md`，校验工具可用性和实际路径
+3. `NEXT`: 读取 [../tool-index.md](../tool-index.md)，校验工具可用性和实际路径
 4. `NEXT`: 缺工具时调用 bootstrap，不要猜路径
 5. `ACT`: 进入"工作流"第一步并执行，不要停在确认状态
 
@@ -39,10 +39,10 @@ description: 在 CLI 环境下做 Android APK 逆向时使用。适用于 APK �
 
 以下流程高频且参数容易出错，优先用 skill 自带脚本：
 
-- 一次性完成 `jadx + apktool` 落盘并产出摘要：`scripts/decode.ps1`
-- Frida 设备检查、进程列举、spawn/attach 注入：`scripts/frida-run.ps1`
-- 重建、对齐、签名、安装 APK：`scripts/rebuild-sign-install.ps1`
-- 快速抽取 Manifest 关键组件与权限：`scripts/manifest-summary.ps1`
+- 一次性完成 `jadx + apktool` 落盘并产出摘要：[scripts/decode.ps1](scripts/decode.ps1)
+- Frida 设备检查、进程列举、spawn/attach 注入：[scripts/frida-run.ps1](scripts/frida-run.ps1)
+- 重建、对齐、签名、安装 APK：[scripts/rebuild-sign-install.ps1](scripts/rebuild-sign-install.ps1)
+- 快速抽取 Manifest 关键组件与权限：[scripts/manifest-summary.ps1](scripts/manifest-summary.ps1)
 
 以下一行命令保持直接调用，不单独封装：
 
@@ -54,7 +54,7 @@ description: 在 CLI 环境下做 Android APK 逆向时使用。适用于 APK �
 
 ## 自带脚本
 
-### `scripts/decode.ps1`
+### [scripts/decode.ps1](scripts/decode.ps1)
 
 用途：
 
@@ -70,7 +70,7 @@ pwsh -File "<skill-root>\apk-reverse\scripts\decode.ps1" -ApkPath "D:\DOWNLOAD\a
 pwsh -File "<skill-root>\apk-reverse\scripts\decode.ps1" -ApkPath "D:\DOWNLOAD\app.apk" -Name demo -SkipJadx
 ```
 
-### `scripts/frida-run.ps1`
+### [scripts/frida-run.ps1](scripts/frida-run.ps1)
 
 用途：
 
@@ -85,7 +85,7 @@ pwsh -File "<skill-root>\apk-reverse\scripts\frida-run.ps1" -Usb -ListProcesses
 pwsh -File "<skill-root>\apk-reverse\scripts\frida-run.ps1" -Usb -Spawn -Package com.example.app -ScriptPath "D:\hooks\test.js"
 ```
 
-### `scripts/rebuild-sign-install.ps1`
+### [scripts/rebuild-sign-install.ps1](scripts/rebuild-sign-install.ps1)
 
 用途：
 
@@ -106,7 +106,7 @@ pwsh -File "<skill-root>\apk-reverse\scripts\rebuild-sign-install.ps1" -ProjectD
 - 默认生成并复用调试 keystore
 - 默认输出到 `ProjectDir` 同目录，便于和原始包、解包目录放在一起
 
-### `scripts/manifest-summary.ps1`
+### [scripts/manifest-summary.ps1](scripts/manifest-summary.ps1)
 
 用途：
 
@@ -156,7 +156,7 @@ jadx --deobf -d jadx_out app.apk
 
 - JEB Pro 是商业软件，必须由用户自行取得并安装有效许可证；本包不会下载、破解或规避许可。
 - 仅在 `tool-index` 已确认本机 JEB 可用时调用；否则继续使用 `jadx`、`apktool`、Ghidra、IDA 或 radare2。
-- 第三方 JEB MCP bridge 不是本包依赖。安装前必须按 `../ops/skill-supply-chain.md` 审阅源码、权限、网络行为和版本，再由用户明确确认注册。
+- 第三方 JEB MCP bridge 不是本包依赖。安装前必须按 [../ops/skill-supply-chain.md](../ops/skill-supply-chain.md) 审阅源码、权限、网络行为和版本，再由用户明确确认注册。
 
 ### `apktool`
 
@@ -224,7 +224,7 @@ adb pull /data/local/tmp/file .
    - 主 `package`
    - `application`、`activity`、`service`、`receiver`
    - `lib/` 目录里是否有 `.so`
-4. Issue #65 威胁形态速查（授权样本/设备；详见 `../reverse-engineering/references/nonpe-format-cookbook.md` §7–8）：
+4. Issue #65 威胁形态速查（授权样本/设备；详见 [../reverse-engineering/references/nonpe-format-cookbook.md](../reverse-engineering/references/nonpe-format-cookbook.md) §7–8）：
    - 透明/隐藏图标（AU）：`aapt dump badging` + manifest theme/label/icon → `E-android-hidden-icon-manifest`
    - Magisk/脚本格机特征与远程 curl|sh（AR/AS）→ 特征与 URL 入证，**不执行**破坏命令
    - 持久化路径（AT）：`service.d` / `priv-app` 等 → `E-android-persistence`
@@ -308,7 +308,7 @@ pwsh -File "<skill-root>\apk-reverse\scripts\rebuild-sign-install.ps1" -ProjectD
 建议：
 
 - 简单一次性命令直接用 `frida-*`
-- 需要稳定复用的注入流程优先走 `scripts/frida-run.ps1`
+- 需要稳定复用的注入流程优先走 [scripts/frida-run.ps1](scripts/frida-run.ps1)
 
 ### 6. Native `.so` 分流
 
@@ -394,9 +394,9 @@ frida -U -f com.example.app -l hook.js
 
 ### 自举触发点
 
-- `scripts/decode.ps1`：缺 jadx 或 apktool 时自动调用 `bootstrap-reverse.ps1`
-- `scripts/rebuild-sign-install.ps1`：缺 adb 或 apktool 时自动调用 bootstrap
-- `scripts/frida-run.ps1`：当前仍为手动检查（frida 通常已通过 pip 安装）
+- [scripts/decode.ps1](scripts/decode.ps1)：缺 jadx 或 apktool 时自动调用 `bootstrap-reverse.ps1`
+- [scripts/rebuild-sign-install.ps1](scripts/rebuild-sign-install.ps1)：缺 adb 或 apktool 时自动调用 bootstrap
+- [scripts/frida-run.ps1](scripts/frida-run.ps1)：当前仍为手动检查（frida 通常已通过 pip 安装）
 
 ### 自举失败时
 

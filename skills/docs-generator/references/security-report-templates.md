@@ -45,7 +45,7 @@
 
 **通用元素（G1–G7）摘要**：G1 执行摘要 MUST · G2 Scope MUST · G3 E/F/P MUST · G4 IOC 仅 `malware`/`apt` MUST · G5 建议在 `malware`/`apt`/`vuln` MUST · G6 附录 SHOULD · G7 ATT&CK 在 `apt` MUST
 
-选型与章节顺序以 `vendor-report-rules.md` 为准；与 §0.1–0.5 冲突时 **Evidence 契约优先**。
+选型与章节顺序以 [vendor-report-rules.md](vendor-report-rules.md) 为准；与 §0.1–0.5 冲突时 **Evidence 契约优先**。
 
 ## 1. 逆向工程报告模板
 
@@ -126,7 +126,7 @@
 
 当任务为恶意软件分析、病毒报告、APT/战役分析时，**不要**仅用上面「逆向工程」骨架交差；普通逆向任务保持原模板，不自动选择 vendor flavor：
 
-1. 读 `vendor-report-rules.md` 选 `malware` 或 `apt`
+1. 读 [vendor-report-rules.md](vendor-report-rules.md) 选 `malware` 或 `apt`
 2. 按对应章节顺序输出
 3. 仍 **MUST** 含 §0 Evidence 链；`malware` / `apt` flavor 另 **MUST** 含 IOC 表
 4. 二进制样本的静态分析 **MUST** 含导入表 Evidence（与 radare2/ida/malware 硬门一致）
@@ -135,7 +135,7 @@
 
 当任务为 **OS/组件漏洞、补丁对比、CVE 技术分析**，或用户明确要求「漏洞技术分析报告」时：
 
-1. 读 `vendor-report-rules.md` §3b，使用 thin `vuln` 章节顺序（**不是** malware/apt 全文 flavor）
+1. 读 [vendor-report-rules.md](vendor-report-rules.md) §3b，使用 thin `vuln` 章节顺序（**不是** malware/apt 全文 flavor）
 2. **MUST** 含：影响范围、授权内复现或明确 n/a、崩溃/根因或补丁差异 Evidence、防护/补丁建议
 3. **MUST** 含 §0 Evidence→Finding→Path
 4. **MUST NOT** 在未授权目标上扩展 PoC，或抄录外部利用武器化细节

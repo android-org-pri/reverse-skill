@@ -15,12 +15,12 @@ Z3r0 启发、**本包形态**实现：
 
 相关 references（非孤儿，从本 hub / MASTER / SKILL 可达）：
 
-- `../references/community-security-skills.md` — 社区 skill 生态对照  
-- `../references/domain-coverage-map.md` — 本包领域覆盖  
-- `../attack-chain/references/lifecycle-checklist.md` — 攻击链阶段门闩  
-- `../reverse-engineering/references/re-agent-workflow.md` — RE 四阶段  
-- `../pentest-tools/references/recon-pipeline.md` — 授权侦察 + Evidence 门  
+- [../references/community-security-skills.md](../references/community-security-skills.md) — 社区 skill 生态对照  
+- [../references/domain-coverage-map.md](../references/domain-coverage-map.md) — 本包领域覆盖  
+- [../attack-chain/references/lifecycle-checklist.md](../attack-chain/references/lifecycle-checklist.md) — 攻击链阶段门闩  
+- [../reverse-engineering/references/re-agent-workflow.md](../reverse-engineering/references/re-agent-workflow.md) — RE 四阶段  
+- [../pentest-tools/references/recon-pipeline.md](../pentest-tools/references/recon-pipeline.md) — 授权侦察 + Evidence 门  
 
-- 脚本：`../scripts/case-init.ps1`
-- 校验：`../scripts/verify-routing-coherence.ps1`（含 ops 契约检查）
-- 审查：`../case-review/scripts/review_case.py`（只读 Evidence 图检查）
+- 脚本：[../scripts/case-init.ps1](../scripts/case-init.ps1)
+- 校验：[../scripts/verify-routing-coherence.ps1](../scripts/verify-routing-coherence.ps1)（含 ops 契约检查）
+- 审查：[../case-review/scripts/review_case.py](../case-review/scripts/review_case.py)（只读 Evidence 图检查）

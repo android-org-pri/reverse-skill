@@ -98,4 +98,4 @@ signtool verify /pa /all /v '{native_game_sdk}'
 本文仅保留通用版本、API 路径结构、数量级和分析方法。样本名、发布者、真实域名、案件目录、哈希、配置密钥、token 与用户标识均已替换或省略；未附带样本文件。
 
 ---
-<!-- [社区贡献] 完成后询问用户是否 PR 到主仓库。流程见 CONTRIBUTE-BACK.md -->
+<!-- [社区贡献] 完成后询问用户是否 PR 到主仓库。流程见 [CONTRIBUTE-BACK.md](CONTRIBUTE-BACK.md) -->

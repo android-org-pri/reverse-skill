@@ -13,7 +13,7 @@ When the current workspace is the `reverse-skill` repository:
 2. Run the platform-native `skills/scripts/master-route` entry with the user's task to select the PRIMARY skill from `skills/config/routing.json`.
 3. Before any target action, create and validate `work/<case>/scope.md` with the platform-native `case-init` and `case-guard` scripts.
 4. Open the selected `skills/<PRIMARY>/SKILL.md` and follow its task-specific instructions.
-5. Resolve tools only through the generated `skills/tool-index.md`; do not register MCP servers or install tools unless the user requested that action.
+5. Resolve tools only through the generated [skills/tool-index.md](skills/tool-index.md); do not register MCP servers or install tools unless the user requested that action.
 
 If the repository is not the current workspace and no local repository path was supplied, explain that this adapter does not bundle a second copy of the router. Ask the user to open or clone `https://github.com/zhaoxuya520/reverse-skill` and then continue from its `RULES.md`.
 

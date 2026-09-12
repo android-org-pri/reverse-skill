@@ -38,7 +38,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/kerberos-delegation.md` for the delegation checklist, ticket fields to preserve, and common proof mistakes.
+- Load [references/kerberos-delegation.md](references/kerberos-delegation.md) for the delegation checklist, ticket fields to preserve, and common proof mistakes.
 
 ## What To Preserve
 

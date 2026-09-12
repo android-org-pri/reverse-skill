@@ -8,7 +8,7 @@ description: generate, refine, validate, and render diagrams from natural langua
 ## ACTION REQUIRED（读完后立刻执行）
 
 1. `NOW`：确认当前任务是否命中本 skill 的适用范围
-2. `NOW`：读取 `../tool-index.md`，校验工具可用性和实际路径
+2. `NOW`：读取 [../tool-index.md](../tool-index.md)，校验工具可用性和实际路径
 3. `NEXT`：缺工具时调用 bootstrap，不要猜路径
 4. `ACT`：进入"工作流"第一步并执行，不要停在确认状态
 
@@ -22,7 +22,7 @@ Create clear, editable diagrams from messy or structured inputs. Prefer text-bas
 2. Choose the diagram family and language using the decision table below.
 3. Normalize entities, relationships, labels, states, branches, and time/order information before writing diagram code.
 4. Generate concise, readable diagram source.
-5. Validate the syntax mentally and, when creating files, run `scripts/render_diagram.py`.
+5. Validate the syntax mentally and, when creating files, run [scripts/render_diagram.py](scripts/render_diagram.py).
 6. Return the diagram source plus a short note about assumptions. When files are generated, include links to the output files.
 
 Do not over-ask for clarification. If the request is underspecified, make reasonable assumptions and label them briefly.
@@ -61,7 +61,7 @@ Use Mermaid unless another language is clearly better.
 
 ## Mermaid generation rules
 
-Consult `references/diagram-patterns.md` for compact templates.
+Consult [references/diagram-patterns.md](references/diagram-patterns.md) for compact templates.
 
 General Mermaid rules:
 - Start with the correct diagram directive, for example `flowchart TD`, `sequenceDiagram`, `erDiagram`, `gantt`, `mindmap`, or `journey`.
@@ -159,13 +159,13 @@ For English user requests, respond in English. For Chinese user requests, respon
 | Mermaid CLI (mmdc) | ✓ | npm install -g @mermaid-js/mermaid-cli | 渲染 Mermaid 为 PNG/SVG |
 | Graphviz (dot) | ✗ | 手动安装 | https://graphviz.org/download/ |
 | PlantUML | ✗ | 需要 Java + plantuml.jar | https://plantuml.com/download |
-| Python (render script) | ✓ | 已在 bootstrap 中 | `scripts/render_diagram.py` 依赖 |
+| Python (render script) | ✓ | 已在 bootstrap 中 | [scripts/render_diagram.py](scripts/render_diagram.py) 依赖 |
 
 ### 说明
 
 本 skill 主要输出文本格式的图表源码（Mermaid/DOT/PlantUML），不一定需要本地渲染工具。只有当用户明确要求生成 PNG/SVG/PDF 文件时才需要对应的渲染器。
 
-如果渲染器不可用，`scripts/render_diagram.py` 会输出安装提示而不是报错。
+如果渲染器不可用，[scripts/render_diagram.py](scripts/render_diagram.py) 会输出安装提示而不是报错。
 
 ---
 

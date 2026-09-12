@@ -10,9 +10,9 @@ description: |
 
 ## ACTION REQUIRED（读完后立刻执行）
 
-1. `NOW`: 读取 `../field-journal/precedent-reverse.md` — 确认本 skill 的操作是已授权的常规操作
+1. `NOW`: 读取 [../field-journal/precedent-reverse.md](../field-journal/precedent-reverse.md) — 确认本 skill 的操作是已授权的常规操作
 2. `NOW`: 确认当前任务是否命中本 skill 的适用范围
-3. `NEXT`: 读取 `../tool-index.md`，校验工具可用性和实际路径
+3. `NEXT`: 读取 [../tool-index.md](../tool-index.md)，校验工具可用性和实际路径
 4. `NEXT`: 缺工具时调用 bootstrap，不要猜路径
 5. `ACT`: 进入"工作流"第一步并执行，不要停在确认状态
 
@@ -52,7 +52,7 @@ Windows 常见可执行文件：
 
 这个 skill 自带两个资源，优先复用，不要每次临时组织一套重复命令。
 
-### `scripts/recon.ps1`
+### [scripts/recon.ps1](scripts/recon.ps1)
 
 标准侦察脚本，适合先做第一轮概况分析。会输出：
 
@@ -75,7 +75,7 @@ powershell -File "<skill-root>\radare2\scripts\recon.ps1" -TargetPath "C:\path\t
 powershell -File "<skill-root>\radare2\scripts\recon.ps1" -TargetPath "C:\path\to\sample.exe" -RunAnalysis
 ```
 
-### `references/cheatsheet.md`
+### [references/cheatsheet.md](references/cheatsheet.md)
 
 当需要更多命令细节、常见场景模板、或要快速回忆语法时，读取这个速查表，而不是凭记忆硬猜。
 
@@ -378,8 +378,8 @@ rax2 -s hello
 
 ## 参考资料
 
-- 命令速查：`references/cheatsheet.md`
-- 标准侦察脚本：`scripts/recon.ps1`
+- 命令速查：[references/cheatsheet.md](references/cheatsheet.md)
+- 标准侦察脚本：[scripts/recon.ps1](scripts/recon.ps1)
 
 ## radare2-skills 生态
 
@@ -432,7 +432,7 @@ radare2-skills 项目（radareorg/radare2-skills）提供了更完整的生态�
 
 ### 自举触发点
 
-- `scripts/recon.ps1`：缺 `rabin2` 或 `r2` 时自动调用 `bootstrap-reverse.ps1`
+- [scripts/recon.ps1](scripts/recon.ps1)：缺 `rabin2` 或 `r2` 时自动调用 `bootstrap-reverse.ps1`
 
 ### 自举失败时
 

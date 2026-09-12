@@ -556,7 +556,7 @@ Functions split into non-contiguous chunks connected by unconditional jumps. Def
 
 > 完整的 OLLVM 脱密工作流、变种生态（Hikari/Polaris/O-MVLL/Tigress/Hodur 等）和社区工具调研见 [ollvm-deobfuscation.md](references/ollvm-deobfuscation.md)。
 
-Beyond basic switch-case (see patterns.md): modern OLLVM variants use:
+Beyond basic switch-case (see [patterns.md](patterns.md)): modern OLLVM variants use:
 - **Bogus control flow:** Fake branches with opaque predicates
 - **Instruction substitution:** `a + b` → `a - (-b)`, `a ^ b` → `(a | b) & ~(a & b)`
 - **String encryption:** Strings decrypted at runtime, cleared after use
@@ -781,7 +781,7 @@ Many CTF challenges stack multiple checks:
 
 ## Agent 响应菜谱 A–T（Issue #65）
 
-> 检测类长文仍见 `malware-analysis/references/anti-analysis-techniques.md`；OLLVM 长流程见 `references/ollvm-deobfuscation.md`。  
+> 检测类长文仍见 `malware-analysis/references/anti-analysis-techniques.md`；OLLVM 长流程见 [references/ollvm-deobfuscation.md](references/ollvm-deobfuscation.md)。  
 > 本节是 **触发 → 动作 → Evidence** 短菜谱，供 agent 在 Dynamic/Static 旁路选用。  
 > **授权隔离 lab 默认**；静态 patch / 改 PEB / 改返回值不是未授权目标上的默认动作。
 

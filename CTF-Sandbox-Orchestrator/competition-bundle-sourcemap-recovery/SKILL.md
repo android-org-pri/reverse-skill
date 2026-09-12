@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/bundle-sourcemap-recovery.md` for the artifact checklist, deobfuscation checklist, and evidence packaging.
+- Load [references/bundle-sourcemap-recovery.md](references/bundle-sourcemap-recovery.md) for the artifact checklist, deobfuscation checklist, and evidence packaging.
 
 ## What To Preserve
 

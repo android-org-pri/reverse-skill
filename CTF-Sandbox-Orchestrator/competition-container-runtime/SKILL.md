@@ -38,7 +38,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/container-runtime.md` for the runtime checklist, mount-chain checklist, and common live-vs-static pitfalls.
+- Load [references/container-runtime.md](references/container-runtime.md) for the runtime checklist, mount-chain checklist, and common live-vs-static pitfalls.
 - If the hard part is kube API permissions, service-account trust, RBAC edges, admission mutations, or controller-created workload drift, prefer `$competition-k8s-control-plane`.
 - If the hard part is Host-header routing, path-prefix rewriting, or route-to-service mapping across nodes, prefer `$competition-runtime-routing`.
 - If the hard part is proving container-to-host crossover, kernel attack-surface preconditions, or stable escape primitives, prefer `$competition-kernel-container-escape`.

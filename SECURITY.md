@@ -15,7 +15,7 @@ Repository instructions cannot technically prevent a user or external AI client 
 
 ## Payload corpus and antivirus detections
 
-`skills/pentest-tools/src-hunter/references/payloader/` contains non-executable security research strings. In particular, `waf-bypass.md` includes PHP/image-polyglot and encoded web-shell examples that can match malware signatures. Do not disable antivirus protection merely to make a clone succeed.
+[skills/pentest-tools/src-hunter/references/payloader/](skills/pentest-tools/src-hunter/references/payloader/) contains non-executable security research strings. In particular, `waf-bypass.md` includes PHP/image-polyglot and encoded web-shell examples that can match malware signatures. Do not disable antivirus protection merely to make a clone succeed.
 
 Use Git object inspection when a working-tree file is quarantined, keep payload access explicit and scope-gated, and review any corpus hash change before release. The current investigation is documented in [the 2026-09-03 security review](docs/SECURITY-REVIEW-2026-09-03.md).
 

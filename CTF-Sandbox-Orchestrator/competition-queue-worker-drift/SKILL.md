@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/queue-worker-drift.md` for the queue checklist, retry checklist, and evidence packaging.
+- Load [references/queue-worker-drift.md](references/queue-worker-drift.md) for the queue checklist, retry checklist, and evidence packaging.
 
 ## What To Preserve
 

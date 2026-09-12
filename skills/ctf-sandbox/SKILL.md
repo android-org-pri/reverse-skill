@@ -7,8 +7,8 @@ description: Thin PRIMARY for CTF / AWD / 靶场 multi-type orchestration. Hands
 
 ## ACTION REQUIRED（读完后立刻执行）
 
-1. `NOW`: 跑 `../scripts/case-init.ps1`；`auth.status=granted` 前禁止对真实外网 ACT。竞赛/靶场用 `-NetworkProfile lab` 或 `offline`。
-2. `NOW`: 打开包根下的 `../../CTF-Sandbox-Orchestrator/ctf-sandbox-orchestrator/SKILL.md`，按它的 sandbox 假设继续。
+1. `NOW`: 跑 [../scripts/case-init.ps1](../scripts/case-init.ps1)；`auth.status=granted` 前禁止对真实外网 ACT。竞赛/靶场用 `-NetworkProfile lab` 或 `offline`。
+2. `NOW`: 打开包根下的 [../../CTF-Sandbox-Orchestrator/ctf-sandbox-orchestrator/SKILL.md](../../CTF-Sandbox-Orchestrator/ctf-sandbox-orchestrator/SKILL.md)，按它的 sandbox 假设继续。
 3. `MUST NOT` 把 40+ 个 `competition-*` 子技能写进 `routing.json`。本入口只是一条 PRIMARY 门闩。
 4. `ACT`: 由 orchestrator 选一个 downstream `competition-*`。具体题型已明确时（pwn/ROP、APK、IDA）应已由 `routing.json` 更靠前的规则赢下，不要再抢。
 

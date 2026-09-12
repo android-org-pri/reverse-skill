@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/ad-certificate-abuse.md` for the AD CS checklist, template checklist, and evidence packaging.
+- Load [references/ad-certificate-abuse.md](references/ad-certificate-abuse.md) for the AD CS checklist, template checklist, and evidence packaging.
 
 ## What To Preserve
 

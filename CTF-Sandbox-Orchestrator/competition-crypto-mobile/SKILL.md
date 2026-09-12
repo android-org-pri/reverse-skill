@@ -38,7 +38,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/crypto-mobile.md` for the transform checklist, hook targets, and evidence packaging.
+- Load [references/crypto-mobile.md](references/crypto-mobile.md) for the transform checklist, hook targets, and evidence packaging.
 - If the task is specifically about Android dynamic tracing, signer hooks, JNI boundaries, or pinning checks, prefer `$competition-android-hooking`.
 - If the task is specifically about iOS runtime tracing, Keychain access, Objective-C or Swift hooks, or pinning checks inside an IPA, prefer `$competition-ios-runtime`.
 - If the task is specifically about media carriers, hidden channels, thumbnails, or appended trailers, prefer `$competition-stego-media`.

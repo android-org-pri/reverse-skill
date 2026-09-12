@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/websocket-runtime.md` for the handshake checklist, frame checklist, and evidence packaging.
+- Load [references/websocket-runtime.md](references/websocket-runtime.md) for the handshake checklist, frame checklist, and evidence packaging.
 
 ## What To Preserve
 

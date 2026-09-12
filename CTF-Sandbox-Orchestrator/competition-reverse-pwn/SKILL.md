@@ -35,7 +35,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/reverse-pwn.md` for triage order, exploit evidence expectations, and common failure modes.
+- Load [references/reverse-pwn.md](references/reverse-pwn.md) for triage order, exploit evidence expectations, and common failure modes.
 - If the task is specifically about staged payload boundaries, config blobs, beacon parameters, or decoded IOC fields, prefer `$competition-malware-config`.
 - If the task is specifically about firmware partitions, boot chains, extracted filesystems, or update-package trust boundaries, prefer `$competition-firmware-layout`.
 - If the task is specifically about upload parsing, previews, archive extraction, converters, or deserialization chains, prefer `$competition-file-parser-chain`.

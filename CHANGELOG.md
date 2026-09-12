@@ -9,16 +9,16 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 ### Added
 - **CI runs remaining unwired suites** — `test-p0-friction.ps1` on the Windows leg of `routing-tests` (Windows PowerShell 5.1); `case-review/tests/test_review_case.py` in the Linux `case-contract` job. `test-workflow-title-safety.ps1` was already wired.
 - **Binary Ninja route and skill** — added `binary-ninja-reverse` for HLIL/MLIL/LLIL, Python API, and an explicitly enabled loopback community MCP bridge; Binary Ninja remains a manual commercial dependency.
-- **Optional Codex adapter plugin** — added `plugins/reverse-skill/` without changing the client-neutral core or auto-registering MCP servers.
+- **Optional Codex adapter plugin** — added [plugins/reverse-skill/](plugins/reverse-skill/) without changing the client-neutral core or auto-registering MCP servers.
 
 ### Fixed
 - **IDA MCP HTTP stall** — `run-supervisor.py` patches stock `idalib_supervisor` onto `ThreadingHTTPServer` and accepts Streamable HTTP GET `/mcp` (patch failure is skipped, supervisor still starts). Keep-alive deadlock is **time since last healthy `tools/list`**, not process `CreationDate`; `open.ps1` holds `opening.lock` so in-flight opens are never `-Force`d. New `recover.ps1` is an immediate `-Force` path. Never `taskkill`s `ida.exe`.
-- **Broken internal doc links + guard** — removed a dangling `phishing-case-study.md` reference and redirected the missing payloader `反弹shell.md` index entry to its tracked raw data. Added `skills/scripts/verify-doc-links.py`, wired into CI, so internal Markdown links are checked from Git index blobs even when Defender quarantines a working-tree payload file.
-- **Windows PowerShell 5.1 encoding** — added a UTF-8 BOM to five non-ASCII `.ps1` scripts (`skills/scripts/verify-doc-facts.ps1`, `apk-reverse/scripts/frida-run.ps1`, `apk-reverse/scripts/rebuild-sign-install.ps1`, `ida-reverse/scripts/start.ps1`, `radare2/scripts/recon.ps1`). Without a BOM, PS 5.1 parses these files as the system ANSI codepage and garbles their Chinese / em-dash string literals; `verify-doc-facts.ps1` was failing four checks under 5.1 (CI only ran it under `pwsh`, which defaults to UTF-8). CI now guards every non-ASCII `.ps1` for a BOM.
+- **Broken internal doc links + guard** — removed a dangling `phishing-case-study.md` reference and redirected the missing payloader `反弹shell.md` index entry to its tracked raw data. Added [skills/scripts/verify-doc-links.py](skills/scripts/verify-doc-links.py), wired into CI, so internal Markdown links are checked from Git index blobs even when Defender quarantines a working-tree payload file.
+- **Windows PowerShell 5.1 encoding** — added a UTF-8 BOM to five non-ASCII `.ps1` scripts ([skills/scripts/verify-doc-facts.ps1](skills/scripts/verify-doc-facts.ps1), `apk-reverse/scripts/frida-run.ps1`, `apk-reverse/scripts/rebuild-sign-install.ps1`, `ida-reverse/scripts/start.ps1`, `radare2/scripts/recon.ps1`). Without a BOM, PS 5.1 parses these files as the system ANSI codepage and garbles their Chinese / em-dash string literals; `verify-doc-facts.ps1` was failing four checks under 5.1 (CI only ran it under `pwsh`, which defaults to UTF-8). CI now guards every non-ASCII `.ps1` for a BOM.
 - **Evidence-consolidation test fixed + two suites wired into CI** — `test-consolidate-evidence.ps1` printed its success marker but leaked exit 1: it ran `review_case.py --verify-hashes` on a case whose consolidation had (by design) rewritten `E-001.md`, so hash fixity could never pass. Dropped `--verify-hashes`, added an explicit exit-code assertion, and wired both it and `test-bootstrap-codex-encoding.ps1` into the Windows leg of `routing-tests` (both shipped in the repo but were never run by CI).
 
 ### Changed
-- **Coherence clamp (identity-preserving)** — `RULES.md` hot path is `master-route` → `case-init` → PRIMARY. `routing.json` remains the only route table; `MASTER-ROUTING.md` priority order is verified against JSON. `routing.md` is advisory. `precedent-auth.md` no longer grants auth.
+- **Coherence clamp (identity-preserving)** — [RULES.md](RULES.md) hot path is `master-route` → `case-init` → PRIMARY. `routing.json` remains the only route table; `MASTER-ROUTING.md` priority order is verified against JSON. `routing.md` is advisory. `precedent-auth.md` no longer grants auth.
 - **IDA open** — lock files may force a temp copy; `.i64` / `.idb` are never deleted.
 - **IDA MCP keep-alive** — `start.ps1` reuses a healthy HTTP server, launches `idalib_supervisor` via windowless Python, never `taskkill`s `ida.exe` (no `/T`). A listening 13337 with `tools/list` timeout is treated as busy, not dead, so the 1-minute watchdog cannot kill a supervisor mid-`idb_open`. `open.ps1` talks ida-pro-mcp 2.x `idb_open`/`idb_list`.
 - **IDA discovery** — `ToolDiscovery.ps1` now catalogs `idalib-mcp`, `ida-pro-mcp`, and `ida` with Program Files + per-user Python fallbacks.
@@ -28,14 +28,14 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [1.0.1] — 2026-08-08
 ### Added
-- **Routing single source of truth** — `skills/config/routing.json` (R0–R39 keyword rules with `must` / `mustAll` / `exclude` semantics). `master-route.ps1` now reads this file; hardcoded routing tables removed from scripts. Routing knowledge lives in one place.
-- **Routing regression benchmark** — `skills/tests/routing-benchmark.json` (163 bilingual cases, 40 quick) + `skills/scripts/test-routing.ps1` runner. Any routing change must keep the benchmark green.
+- **Routing single source of truth** — [skills/config/routing.json](skills/config/routing.json) (R0–R39 keyword rules with `must` / `mustAll` / `exclude` semantics). `master-route.ps1` now reads this file; hardcoded routing tables removed from scripts. Routing knowledge lives in one place.
+- **Routing regression benchmark** — [skills/tests/routing-benchmark.json](skills/tests/routing-benchmark.json) (163 bilingual cases, 40 quick) + [skills/scripts/test-routing.ps1](skills/scripts/test-routing.ps1) runner. Any routing change must keep the benchmark green.
 - **Routing keyword coverage expansion** (benchmark-driven): burp suite family, pcap/wireshark, root-detection/certificate-pinning, buffer overflow, `.so`/native/JNI, go binaries (中文), js-encrypt, webshell, privilege escalation, S3/object storage, memory dump, incident response, Bluetooth/BLE, USB, Unity/game reverse, security assessment, and more.
 - **Supply-chain pin gate** — `verify-routing-coherence.ps1` now fails on any auto-install capability lacking `pinnedVersion` / `pinnedCommit` / `pinPolicy` / asset hash. Pinned: frida-tools 14.10.4, pwntools 4.15.0, agent-browser 0.31.1, ida-pro-mcp @commit, SecLists/ProxyCat @commit, nuclei v3.9.0; winget sources annotated with `winget-latest` policy.
 - **Client-neutral integration contract** — routing, tests, manifests, and case workflows remain independent of Claude Code, Codex, Cursor, OpenCode, or any other client; client adapters are optional and must not define repository identity.
-- **Skill navigation index** — `skills/INDEX.md` auto-generated from SKILL.md frontmatter by `extract-summaries.ps1` (`-Check` mode for CI drift detection).
-- **CI pipeline** — `.github/workflows/ci.yml`: Windows + Ubuntu matrix (PowerShell shim for Linux) running test-routing / verify / smoke / INDEX check / JSON validation, plus `bash -n` syntax checks.
-- **Example case** — `examples/ctf-demo/` full workflow walkthrough (route → scope gate → timeline → evidence → report).
+- **Skill navigation index** — [skills/INDEX.md](skills/INDEX.md) auto-generated from SKILL.md frontmatter by `extract-summaries.ps1` (`-Check` mode for CI drift detection).
+- **CI pipeline** — [.github/workflows/ci.yml](.github/workflows/ci.yml): Windows + Ubuntu matrix (PowerShell shim for Linux) running test-routing / verify / smoke / INDEX check / JSON validation, plus `bash -n` syntax checks.
+- **Example case** — [examples/ctf-demo/](examples/ctf-demo/) full workflow walkthrough (route → scope gate → timeline → evidence → report).
 - **frontmatter completion** — `dsl-vm-reverse/SKILL.md` gained name/description frontmatter (was the only module missing it).
 - **README refresh** — updated the multilingual project overview, release badge, current capabilities, and sponsor showcase layout.
 - `case-review/`: read-only Evidence Graph Review with scope, timeline, work item, Finding, Path, and optional SHA-256 fixity checks
@@ -53,7 +53,7 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ### Security
 - Core scripts do not write client-global instruction files; client-specific integration remains outside the routing core.
-- Added `docs/PACKAGE-SECURITY-AUDIT.md`: static audit of package executables (no backdoor / no auto DB wipe found)
+- Added [docs/PACKAGE-SECURITY-AUDIT.md](docs/PACKAGE-SECURITY-AUDIT.md): static audit of package executables (no backdoor / no auto DB wipe found)
 - Pin supply-chain floating tags: jshook `@0.3.4`, pentestswarm `v0.1.0`
 - Bootstrap integrity: GitHub zip/jar downloads verify `assetSha256` (manifest) or GitHub API `digest`; mismatch deletes file and fails
 - Pin jadx `v1.5.6` and apktool `v3.0.2` with published SHA256
@@ -72,7 +72,7 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - Scope PowerShell authorization fields to their contract sections and reject unsupported network modes in both guards
 - Reject unsupported network profiles during case initialization so invalid scopes are never emitted as ready
 - Reject unknown case presets in Bash and PowerShell before creating case artifacts, preventing mistyped presets from silently falling back to pending/offline defaults
-- Generate `skills/INDEX.md` from tracked skills only, excluding ignored local modules so clean-clone CI stays reproducible
+- Generate [skills/INDEX.md](skills/INDEX.md) from tracked skills only, excluding ignored local modules so clean-clone CI stays reproducible
 - Fail routing coherence when a configured skill is missing or only exists as an untracked local file
 
 ## [1.0.0] — 2026-07-18
@@ -81,7 +81,7 @@ First **formal** public release of the reverse-skill skill-router pack.
 
 ### Added
 
-#### Ops / combat contract layer (`skills/ops/`)
+#### Ops / combat contract layer ([skills/ops/](skills/ops/))
 
 - `IDENTITY.md` — product identity: lightweight skill router + bootstrap + field-journal (not a Z3r0-style platform)
 - `scope-contract.md` — case scope + `network_profile`; **auth not granted → no ACT on target**
@@ -91,7 +91,7 @@ First **formal** public release of the reverse-skill skill-router pack.
 - `sandbox-profile.md` — tool profile mapping
 - `skill-supply-chain.md` — Agent Skill / MCP install gate (AST10-lite)
 
-#### PRIMARY routing & case tooling (`skills/scripts/`)
+#### PRIMARY routing & case tooling ([skills/scripts/](skills/scripts/))
 
 - `master-route.ps1` — PRIMARY route from task hint
 - `case-init.ps1` / `case-guard.ps1` — case bootstrap + scope guard
@@ -108,7 +108,7 @@ First **formal** public release of the reverse-skill skill-router pack.
 - `field-journal` precedent library + completion checklist
 - Multi-platform paths: Windows primary, Linux / macOS / Kali docs and scripts
 - CTF-Sandbox-Orchestrator competition sub-skills
-- Burp MCP extension package (`burp-mcp-full/`)
+- Burp MCP extension package ([burp-mcp-full/](burp-mcp-full/))
 
 #### Quality / localization
 
@@ -117,7 +117,7 @@ First **formal** public release of the reverse-skill skill-router pack.
 
 ### Notes
 
-- `skills/tool-index.md` / `tool-index.json` are **machine-local** and intentionally gitignored; generate via `refresh-tool-index` after clone.
+- [skills/tool-index.md](skills/tool-index.md) / `tool-index.json` are **machine-local** and intentionally gitignored; generate via `refresh-tool-index` after clone.
 - This tag freezes the skill-router product surface at commit `9fc280b` plus this release metadata.
 
 ### Links

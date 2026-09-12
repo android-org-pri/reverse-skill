@@ -17,8 +17,8 @@
 
 ## 完整执行链路
 
-1. 按 `README_AI.md` 第 0 节执行引导：`refresh-tool-index.ps1` 生成 tool-index.md（37 工具）。
-2. 读 `tool-index.md` 发现异常：`r2`（radare2 主分析器）= no，但同目录 `rabin2/rasm2/radiff2/rahash2/rax2/r2pm` 全部 = yes。
+1. 按 `README_AI.md` 第 0 节执行引导：`refresh-tool-index.ps1` 生成 [tool-index.md](tool-index.md)（37 工具）。
+2. 读 [tool-index.md](tool-index.md) 发现异常：`r2`（radare2 主分析器）= no，但同目录 `rabin2/rasm2/radiff2/rahash2/rax2/r2pm` 全部 = yes。
 3. 列 `C:\Users\{username}\Tools\radare2\bin` 确认：存在 `r2.bat`（21 字节，内容 `@"%~dp0\radare2" %*`）与 `radare2.exe`，**无 `r2.exe`**。
 4. 读 `lib/ToolDiscovery.ps1:131-141`，`r2` 的 Fallbacks 只找 `r2.exe`，漏掉 `r2.bat`/`radare2.exe`。对比 `jadx`/`apktool`/`analyzeHeadless` 都为 `.bat` 工具配了 fallback。
 5. 修复：给 `r2` Fallbacks 补 `r2.bat` 与 `radare2.exe` 路径（覆盖 `%USERPROFILE%\Tools\radare2\bin`、根目录、`C:\Tools\` 三套位置），保留原 `r2.exe` fallback 兼容其他机器。
@@ -40,7 +40,7 @@
 
 | E-id | severity | status | source_type | 可复用命令模式 | 关联 Finding |
 |------|----------|--------|-------------|----------------|--------------|
-| E-r2 | info | validated | command | `pwsh -File skills/scripts/refresh-tool-index.ps1` 后 tool-index.md 中 `r2` 行 = yes | F-r2 |
+| E-r2 | info | validated | command | `pwsh -File skills/scripts/refresh-tool-index.ps1` 后 [tool-index.md](tool-index.md) 中 `r2` 行 = yes | F-r2 |
 | E-smoke | info | validated | command | `pwsh -File skills/scripts/smoke.ps1` → `OVERALL: ALL PASS` | F-host |
 | E-route | info | validated | command | `pwsh -File skills/scripts/test-routing.ps1` → `166/166 ALL PASS` | F-host |
 | E-p0 | info | validated | command | `pwsh -File skills/scripts/test-p0-friction.ps1` → `OVERALL: ALL PASS` | F-host |
@@ -133,7 +133,7 @@ foreach ($cap in $mc.capabilities) {
 
 ## 索引同步（提交前最后一步）
 
-写完本日志后，同步更新 `_index.md`：
+写完本日志后，同步更新 [_index.md](_index.md)：
 1. 「工具链与环境」小节新增一行 ✓
 2. 「高频成功模式」追加本文件名（PowerShell 子进程入口统一）✓
 3. 「实体倒排」追加本文件名（reverse-skill 引导脚本）✓

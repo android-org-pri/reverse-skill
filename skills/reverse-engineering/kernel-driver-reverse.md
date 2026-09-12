@@ -277,7 +277,7 @@ lx-dmesg             # 内核日志
 
 ## Agent 动作锚点（Issue #65 U–AV）
 
-与 `references/nonpe-format-cookbook.md` §5 对齐（短表，不替代上文流程）：
+与 [references/nonpe-format-cookbook.md](references/nonpe-format-cookbook.md) §5 对齐（短表，不替代上文流程）：
 
 | ID | 动作 | Evidence |
 |----|------|----------|

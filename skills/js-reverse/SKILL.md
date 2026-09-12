@@ -7,9 +7,9 @@ description: 在使用 js-reverse-mcp 做前端 JavaScript 逆向时使用，适
 
 ## ACTION REQUIRED（读完后立刻执行）
 
-1. `NOW`: 读取 `../field-journal/precedent-reverse.md` — 确认本 skill 的操作是已授权的常规操作
+1. `NOW`: 读取 [../field-journal/precedent-reverse.md](../field-journal/precedent-reverse.md) — 确认本 skill 的操作是已授权的常规操作
 2. `NOW`: 确认当前任务是否命中本 skill 的适用范围
-3. `NEXT`: 读取 `../tool-index.md`，校验工具可用性和实际路径
+3. `NEXT`: 读取 [../tool-index.md](../tool-index.md)，校验工具可用性和实际路径
 4. `NEXT`: 缺工具时调用 bootstrap，不要猜路径
 5. `ACT`: 进入"工作流"第一步并执行，不要停在确认状态
 
@@ -132,31 +132,31 @@ description: 在使用 js-reverse-mcp 做前端 JavaScript 逆向时使用，适
 
 - 如果当前任务只是出签名，这一阶段可以降级
 - 如果要长期复用算法链路，这一阶段必须做
-- Issue #65 混淆旁路（U–AV §4）：JSVMP（AD）→ `E-js-vmp`；CFF+字符串数组（AE）→ `E-js-deobf`；DevTools/debugger 反调试（AF）→ `E-js-anti-debug`。完整触发表见 `../reverse-engineering/references/nonpe-format-cookbook.md`；AST 细节仍用 `references/ast-deobfuscation.md`
+- Issue #65 混淆旁路（U–AV §4）：JSVMP（AD）→ `E-js-vmp`；CFF+字符串数组（AE）→ `E-js-deobf`；DevTools/debugger 反调试（AF）→ `E-js-anti-debug`。完整触发表见 [../reverse-engineering/references/nonpe-format-cookbook.md](../reverse-engineering/references/nonpe-format-cookbook.md)；AST 细节仍用 [references/ast-deobfuscation.md](references/ast-deobfuscation.md)
 
 ## 执行要求
 
 - 所有重要步骤都要写入本地 task artifact
 - 如果无法解释为什么调用某个工具，就不要调用
 - 优先使用 `js-reverse_*` 或 jshookmcp 的现成 MCP 能力直接取证，不要先写脚本重造能力
-- 失败时按 `references/fallbacks.md` 回退
-- 输出遵循 `references/output-contract.md`
+- 失败时按 [references/fallbacks.md](references/fallbacks.md) 回退
+- 输出遵循 [references/output-contract.md](references/output-contract.md)
 
 ## 必读引用
 
-- 自动化入口：`references/automation-entry.md`
-- 参数默认值：`references/tool-defaults.md`
-- 任务输入模板：`references/task-input-template.md`
-- MCP 专用任务编排：`references/mcp-task-template.md`
-- 任务产物：`references/task-artifacts.md`
-- 本地复现：`references/local-rebuild.md`
-- 补环境：`references/env-patching.md`
-- Node 复现：`references/node-env-rebuild.md`
-- 插桩：`references/instrumentation.md`
-- AST 去混淆：`references/ast-deobfuscation.md`
-- 非 PE/JS 混淆菜谱 U–AV：`../reverse-engineering/references/nonpe-format-cookbook.md`（AD/AE/AF）
-- 回退：`references/fallbacks.md`
-- 输出契约：`references/output-contract.md`
+- 自动化入口：[references/automation-entry.md](references/automation-entry.md)
+- 参数默认值：[references/tool-defaults.md](references/tool-defaults.md)
+- 任务输入模板：[references/task-input-template.md](references/task-input-template.md)
+- MCP 专用任务编排：[references/mcp-task-template.md](references/mcp-task-template.md)
+- 任务产物：[references/task-artifacts.md](references/task-artifacts.md)
+- 本地复现：[references/local-rebuild.md](references/local-rebuild.md)
+- 补环境：[references/env-patching.md](references/env-patching.md)
+- Node 复现：[references/node-env-rebuild.md](references/node-env-rebuild.md)
+- 插桩：[references/instrumentation.md](references/instrumentation.md)
+- AST 去混淆：[references/ast-deobfuscation.md](references/ast-deobfuscation.md)
+- 非 PE/JS 混淆菜谱 U–AV：[../reverse-engineering/references/nonpe-format-cookbook.md](../reverse-engineering/references/nonpe-format-cookbook.md)（AD/AE/AF）
+- 回退：[references/fallbacks.md](references/fallbacks.md)
+- 输出契约：[references/output-contract.md](references/output-contract.md)
 
 ---
 
@@ -169,10 +169,10 @@ description: 在使用 js-reverse-mcp 做前端 JavaScript 逆向时使用，适
 - `reverse-engineering/SKILL.md`（如果目标不是前端 JS）
 
 **下游出口**:
-- 需补环境 → `references/env-patching.md`
-- 需本地复现 → `references/local-rebuild.md` / `references/node-env-rebuild.md`
-- 需去混淆 → `references/ast-deobfuscation.md`
-- 走不通时回退 → `references/fallbacks.md`
+- 需补环境 → [references/env-patching.md](references/env-patching.md)
+- 需本地复现 → [references/local-rebuild.md](references/local-rebuild.md) / [references/node-env-rebuild.md](references/node-env-rebuild.md)
+- 需去混淆 → [references/ast-deobfuscation.md](references/ast-deobfuscation.md)
+- 走不通时回退 → [references/fallbacks.md](references/fallbacks.md)
 
 **同级关联模块**: anything-analyzer MCP（浏览器自动化和 HTTP 捕获能力可以互补）
 

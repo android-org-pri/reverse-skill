@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/mailbox-abuse.md` for the consent checklist, rule checklist, and evidence packaging.
+- Load [references/mailbox-abuse.md](references/mailbox-abuse.md) for the consent checklist, rule checklist, and evidence packaging.
 
 ## What To Preserve
 

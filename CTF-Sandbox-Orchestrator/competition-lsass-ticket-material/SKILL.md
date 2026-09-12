@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/lsass-ticket-material.md` for the session checklist, replay checklist, and evidence packaging.
+- Load [references/lsass-ticket-material.md](references/lsass-ticket-material.md) for the session checklist, replay checklist, and evidence packaging.
 - If the task is specifically about DPAPI masterkeys, protected blobs, browser or vault stores, or proving which recovered DPAPI secret is accepted, prefer `$competition-dpapi-credential-chain`.
 
 ## What To Preserve

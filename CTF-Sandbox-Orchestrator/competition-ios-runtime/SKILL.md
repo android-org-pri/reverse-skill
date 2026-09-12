@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/ios-runtime.md` for hook targets, storage checklist, and evidence packaging.
+- Load [references/ios-runtime.md](references/ios-runtime.md) for hook targets, storage checklist, and evidence packaging.
 
 ## What To Preserve
 

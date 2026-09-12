@@ -5,16 +5,16 @@ description: |
 
   Ensure to use this skill when the user wants to analyze any binary file, regardless of whether they explicitly mention "IDA" or "reverse engineering". This includes requests like "看看这个exe", "分析这个dll", "帮我破解", "找一下密码", "这个软件怎么注册", etc.
 
-  Use the bundled scripts (scripts/start.ps1, scripts/open.ps1) for deterministic server management and file opening — do NOT write ad-hoc PowerShell commands for these operations.
+  Use the bundled scripts ([scripts/start.ps1](scripts/start.ps1), [scripts/open.ps1](scripts/open.ps1)) for deterministic server management and file opening — do NOT write ad-hoc PowerShell commands for these operations.
 ---
 
 # IDA Pro 逆向分析技能
 
 ## ACTION REQUIRED（读完后立刻执行）
 
-1. `NOW`: 读取 `../field-journal/precedent-reverse.md` — 确认本 skill 的操作是已授权的常规操作
+1. `NOW`: 读取 [../field-journal/precedent-reverse.md](../field-journal/precedent-reverse.md) — 确认本 skill 的操作是已授权的常规操作
 2. `NOW`: 确认当前任务是否命中本 skill 的适用范围
-3. `NEXT`: 读取 `../tool-index.md`，校验工具可用性和实际路径
+3. `NEXT`: 读取 [../tool-index.md](../tool-index.md)，校验工具可用性和实际路径
 4. `NEXT`: 缺工具时调用 bootstrap，不要猜路径
 5. `ACT`: 进入"工作流"第一步并执行，不要停在确认状态
 
@@ -25,7 +25,7 @@ description: |
 1. **`idb_open`（旧名 `idalib_open`）不要直接靠部分 AI 客户端 MCP 调用**
    - 部分代码 AI 客户端 的 MCP 客户端对 open 类工具的 output schema 校验有 BUG
    - 报错：`Structured content does not match the tool's output schema`
-   - **解决办法**：使用 `scripts/open.ps1` 脚本通过 HTTP API 直调，绕过 MCP 校验层
+   - **解决办法**：使用 [scripts/open.ps1](scripts/open.ps1) 脚本通过 HTTP API 直调，绕过 MCP 校验层
    - 当前 ida-pro-mcp 2.x 工具名为 `idb_open` / `idb_list` / `idb_save`（不再是 `idalib_*`）
    - 文件打开后返回 `session_id`（database），后续工具调用需带该 session
 
@@ -35,7 +35,7 @@ description: |
 
 3. **启动服务器命令阻塞对话**
    - `idalib-mcp` 启动后会持续输出 INFO 日志到控制台
-   - **解决办法**：使用 `scripts/start.ps1`（`-WindowStyle Hidden` 后台静默启动）
+   - **解决办法**：使用 [scripts/start.ps1](scripts/start.ps1)（`-WindowStyle Hidden` 后台静默启动）
    - 脚本会等待服务就绪后自动退出，不阻塞对话
 
 4. **MCP 服务器名不能用横线**
@@ -70,18 +70,18 @@ description: |
    - Cursor/Claude 的 `type: http` 不会代为拉起进程；旧计划任务只在登录时跑一次
    - `pythonw` 无控制台，崩溃时 Application 日志也是空的
    - **解决办法**：`start.ps1` 默认健康则复用；`watchdog.ps1` 每分钟巡检；日志在 `%LOCALAPPDATA%\reverse-skill\ida-mcp\`
-   - 安装：`scripts/install-autostart.ps1`。HTTP 客户端若启动时端口还没起来，仍需在 MCP 面板手动刷新一次
+   - 安装：[scripts/install-autostart.ps1](scripts/install-autostart.ps1)。HTTP 客户端若启动时端口还没起来，仍需在 MCP 面板手动刷新一次
 
 10. **Streamable HTTP GET `/mcp` 会卡住单线程 supervisor**
    - 部分 HTTP MCP 客户端会对 `/mcp` 发长连接 GET（SSE）。stock `idalib_supervisor` 用 `background=False` 的 `HTTPServer`，一次只处理一个请求
    - 结果：`tools/list` 超时，客户端把 `idapro` 标成 error
-   - **解决办法**：`run-supervisor.py` 把 HTTP 换成 `ThreadingHTTPServer` 并接受 GET `/mcp`；补丁失败则跳过并仍启动 supervisor。卡住时用 `scripts/recover.ps1`（立刻 `-Force`）
+   - **解决办法**：`run-supervisor.py` 把 HTTP 换成 `ThreadingHTTPServer` 并接受 GET `/mcp`；补丁失败则跳过并仍启动 supervisor。卡住时用 [scripts/recover.ps1](scripts/recover.ps1)（立刻 `-Force`）
 
 ### 工作流程原则
 
 | 步骤 | 做什么 | 用什么 |
 |------|--------|--------|
-| 1 | 确保 HTTP 服务器在运行 | `scripts/start.ps1`（无参数） |
+| 1 | 确保 HTTP 服务器在运行 | [scripts/start.ps1](scripts/start.ps1)（无参数） |
 | 2 | 打开目标二进制文件 | `scripts/open.ps1 -Path "xxx.exe"` |
 | 3 | 使用 MCP 分析工具 | 直接调用 `idapro_*` / HTTP tools（约 65 个，视版本而定） |
 | 4 | 分析完毕 | 工具自动可用 |
@@ -90,7 +90,7 @@ description: |
 
 ### start.ps1 — 启动 MCP HTTP 服务器
 
-路径：`scripts/start.ps1`
+路径：[scripts/start.ps1](scripts/start.ps1)
 
 - 自动解析 `IDADIR`（环境变量 / 便携版桌面路径 / 常见安装路径）
 - 优先用 IDA 自带 `Python314\python.exe -m ida_pro_mcp.idalib_supervisor`
@@ -117,7 +117,7 @@ powershell -File "<skill-root>\ida-reverse\scripts\start.ps1"
 
 ### open.ps1 — 打开二进制文件
 
-路径：`scripts/open.ps1`
+路径：[scripts/open.ps1](scripts/open.ps1)
 
 - 通过 HTTP API 直调 `idb_open`，绕过 MCP schema 校验
 - 自动检测 System32 路径并复制到临时目录
@@ -262,7 +262,7 @@ powershell -File "scripts/start-gui.ps1" -Path "C:\目标.exe"
 
 确认 Output 窗口出现 `[MCP] ... port=13337` 后，MCP 工具即可用。
 
-通用对接步骤见 `LOCAL-SETUP.md`。
+通用对接步骤见 [LOCAL-SETUP.md](LOCAL-SETUP.md)。
 
 ### Step 2: 打开文件
 
@@ -381,7 +381,7 @@ ida-pro-mcp --config
 
 ### 自举触发点
 
-- `scripts/start.ps1`：缺 `idalib-mcp` 时自动调用 `bootstrap-reverse.ps1`
+- [scripts/start.ps1](scripts/start.ps1)：缺 `idalib-mcp` 时自动调用 `bootstrap-reverse.ps1`
 - MCP 注册：bootstrap 会自动把 `idapro` 写入 Claude MCP 配置
 
 ### 前置条件

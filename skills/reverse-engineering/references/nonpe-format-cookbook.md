@@ -1,6 +1,6 @@
 # 非 PE / 多格式 Agent 响应菜谱 U–AV + AW–DN
 
-> 与 PE 反调试菜谱 A–T（../anti-analysis.md）并列：按**文件类型**给出「触发 → 动作一行 → Evidence」。  
+> 与 PE 反调试菜谱 A–T（[../anti-analysis.md](../anti-analysis.md)）并列：按**文件类型**给出「触发 → 动作一行 → Evidence」。  
 > **不是**第二套主流程。Triage 识别类型后跳转到对应 skill + 本表。  
 > 默认 **授权隔离 lab / 已授权样本与设备**。格机、BYOVD、反射注入等写**检测与取证**，不写未授权破坏/利用教程。  
 > 绕过或还原失败也 MUST 记 Evidence；禁止静默当「无害」。

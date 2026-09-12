@@ -2,7 +2,7 @@
 
 > Issue #65 问题 2。  
 > **只抽结构与写法规则，禁止抄录任何厂商报告正文、图表、真实 IOC 实例或大段表述。**  
-> 本文件是**叠加层**：不替换 `security-report-templates.md` 的任务模板，也不削弱 §0 Evidence→Finding→Path。
+> 本文件是**叠加层**：不替换 [security-report-templates.md](security-report-templates.md) 的任务模板，也不削弱 §0 Evidence→Finding→Path。
 
 结构参考（公开样例，仅骨架）：
 
@@ -39,7 +39,7 @@
 |---|------|------|
 | G1 | 执行摘要 / 概述 | **MUST**：3–8 句：分析了什么、最严重结论、影响面、建议动作 |
 | G2 | 范围与授权 | **MUST**：链到 case `scope.md`（见模板 §0.1） |
-| G3 | Evidence→Finding→Path | **MUST**：见 `security-report-templates.md` §0 与 `skills/ops/evidence-finding-path.md` |
+| G3 | Evidence→Finding→Path | **MUST**：见 [security-report-templates.md](security-report-templates.md) §0 与 `skills/ops/evidence-finding-path.md` |
 | G4 | IOC 表 | `malware` / `apt` **MUST**；其他任务仅在存在相关指标时出现 |
 | G5 | 建议 / 处置 | `malware` / `apt` **MUST**：至少 1 条可执行建议；其他任务按原任务模板 |
 | G6 | 附录元数据 | **SHOULD**：工具与版本、样本哈希、完整复现命令 |
@@ -200,7 +200,7 @@
 ---
 ## 4. 与现有任务模板的挂接
 
-| 任务模板（`security-report-templates.md`） | 叠加方式 |
+| 任务模板（[security-report-templates.md](security-report-templates.md)） | 叠加方式 |
 |------------------------------------------|----------|
 | 1. 逆向工程报告 | 默认 `flavor = null`，保留原「静态/动态/复现」骨架和导入表等硬门 Evidence；只有明确恶意样本才套 §2 |
 | 2. 渗透测试报告 | `flavor = null`；补 Base 中适用的 G1–G3，攻击路径对齐 §0 Path，不强制 IOC |

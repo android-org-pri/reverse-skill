@@ -1,7 +1,7 @@
 # Kali Linux 入口（短跳转）
 
 > **详细说明以 [kali/README-kali.md](kali/README-kali.md) 为准。**  
-> 本文件仅作仓库根目录的 Kali 快捷入口，避免与 `kali/` 下正文重复维护。
+> 本文件仅作仓库根目录的 Kali 快捷入口，避免与 [kali/](kali/) 下正文重复维护。
 
 ## AI：读完后立即执行
 
@@ -25,8 +25,8 @@ bash kali/scripts/refresh-tool-index.sh
 
 | 内容 | 位置 |
 |------|------|
-| 共享 skill / 路由 / ops | `skills/`、`RULES.md` |
-| Kali 脚本与 manifest | `kali/scripts/` |
+| 共享 skill / 路由 / ops | [skills/](skills/)、[RULES.md](RULES.md) |
+| Kali 脚本与 manifest | [kali/scripts/](kali/scripts/) |
 | 完整 Kali 文档 | **[kali/README-kali.md](kali/README-kali.md)** |
 
 通用 AI 引导仍见 [README_AI.md](README_AI.md)（选 Kali 分支时转本目录文档）。

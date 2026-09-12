@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/request-normalization-smuggling.md` for parse-differential checklist and evidence packaging.
+- Load [references/request-normalization-smuggling.md](references/request-normalization-smuggling.md) for parse-differential checklist and evidence packaging.
 
 ## What To Preserve
 

@@ -7,7 +7,7 @@ description: Use for authorized OT/ICS security assessment covering Purdue model
 
 ## ACTION REQUIRED（读完后立刻执行）
 
-1. `NOW`: 读取 `../field-journal/precedent-pentest.md` — **工控环境误操作可致物理危害**
+1. `NOW`: 读取 [../field-journal/precedent-pentest.md](../field-journal/precedent-pentest.md) — **工控环境误操作可致物理危害**
 2. `NOW`: 书面授权必须写清：站点、网段、是否允许主动扫描/写寄存器
 3. `NOW`: case-init；默认 **passive-first**；`ready_for_act` 前禁止对 PLC 写操作
 4. `NEXT`: tool-index；多数工控工具需手动与隔离实验网
@@ -76,8 +76,8 @@ MUST NOT 在未明确允许时：
 
 ## 参考
 
-- `references/ot-safe-assessment.md`
-- `../firmware-pentest/` `../protocol-reverse/` `../network` via pentest-tools
+- [references/ot-safe-assessment.md](references/ot-safe-assessment.md)
+- [../firmware-pentest/](../firmware-pentest/) [../protocol-reverse/](../protocol-reverse/) `../network` via pentest-tools
 
 ## 路由上下文
 

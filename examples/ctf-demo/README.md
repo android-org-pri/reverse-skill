@@ -17,11 +17,11 @@
 
 | 文件 | 说明 |
 |------|------|
-| `scope.md` | 案例范围（auth granted / 目标 / network_profile） |
-| `timeline.md` | 追加式时间线 |
-| `workitems.md` | 工作项与覆盖率 |
-| `evidence/` | 证据记录示例（E-001 复现命令、E-002 崩溃输出） |
-| `report/` | 最终报告结构示例 |
+| [scope.md](scope.md) | 案例范围（auth granted / 目标 / network_profile） |
+| [timeline.md](timeline.md) | 追加式时间线 |
+| [workitems.md](workitems.md) | 工作项与覆盖率 |
+| [evidence/](evidence/) | 证据记录示例（E-001 复现命令、E-002 崩溃输出） |
+| [report/](report/) | 最终报告结构示例 |
 
 ## 真实使用
 

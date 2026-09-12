@@ -66,9 +66,9 @@ description: Use for blue-team threat hunting, detection engineering with Sigma/
 
 ## 参考
 
-- `references/hunting-loop.md`
-- `../malware-analysis/references/yara-sigma-rules.md`
-- `../digital-forensics/`
+- [references/hunting-loop.md](references/hunting-loop.md)
+- [../malware-analysis/references/yara-sigma-rules.md](../malware-analysis/references/yara-sigma-rules.md)
+- [../digital-forensics/](../digital-forensics/)
 
 ## 路由上下文
 

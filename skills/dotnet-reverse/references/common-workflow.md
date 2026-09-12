@@ -71,7 +71,7 @@ C# 编辑器改 async 几乎必失败 → 必须用 IL。
 
 ## 字符串解密器提取
 
-详见 `obfuscators.md`。这里补充 dnlib 脚本化批量解字符串：
+详见 [obfuscators.md](obfuscators.md)。这里补充 dnlib 脚本化批量解字符串：
 
 ```csharp
 // dnlib 脚本：扫描所有字符串解密器调用，运行时还原后写回

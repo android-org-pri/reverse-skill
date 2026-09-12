@@ -36,7 +36,7 @@ Burp Suite → Extensions → Add → Java → 选择 build/libs/burp-mcp-full.j
 
 ### 3. 鉴权（v2 起默认启用）
 
-扩展启动时自动生成随机 token 并写入 `~/.burp-mcp-token`。`mcp-bridge.js` 会自动读取该文件并在每个请求携带 `Authorization: Bearer <token>` 头，无需手动配置。
+扩展启动时自动生成随机 token 并写入 `~/.burp-mcp-token`。[mcp-bridge.js](mcp-bridge.js) 会自动读取该文件并在每个请求携带 `Authorization: Bearer <token>` 头，无需手动配置。
 
 需要固定 token 时（例如多个客户端共享），可用：
 - JVM 参数：`-Dburp.mcp.token=<token>`
@@ -65,7 +65,7 @@ Burp Suite → Extensions → Add → Java → 选择 build/libs/burp-mcp-full.j
 
 ## 功能列表
 
-扩展暴露 78 个工具。常用分类如下（完整列表见 `src/main/java/com/burpmcp/McpHttpServer.java` 的 `getToolList()`，或访问 `GET http://127.0.0.1:9876/tools`，需携带 Authorization 头）：
+扩展暴露 78 个工具。常用分类如下（完整列表见 [src/main/java/com/burpmcp/McpHttpServer.java](src/main/java/com/burpmcp/McpHttpServer.java) 的 `getToolList()`，或访问 `GET http://127.0.0.1:9876/tools`，需携带 Authorization 头）：
 
 | 分类 | 工具 |
 |------|------|
@@ -178,4 +178,4 @@ gradle jar      # 需本机已装 Gradle 8.7+
 # 输出: build/libs/burp-mcp-full.jar
 ```
 
-> 推荐使用 `build.bat` / `build.sh`（零依赖，自动下载 jar）。Gradle 路径仅作备选。
+> 推荐使用 [build.bat](build.bat) / [build.sh](build.sh)（零依赖，自动下载 jar）。Gradle 路径仅作备选。

@@ -40,7 +40,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/prompt-injection.md` for the checklist, evidence layout, and common prompt-boundary pitfalls.
+- Load [references/prompt-injection.md](references/prompt-injection.md) for the checklist, evidence layout, and common prompt-boundary pitfalls.
 
 ## What To Preserve
 

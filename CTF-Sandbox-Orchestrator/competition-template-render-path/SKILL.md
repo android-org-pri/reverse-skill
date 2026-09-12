@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/template-render-path.md` for the render checklist, hydration checklist, and evidence packaging.
+- Load [references/template-render-path.md](references/template-render-path.md) for the render checklist, hydration checklist, and evidence packaging.
 
 ## What To Preserve
 

@@ -37,8 +37,8 @@ description: Use for authorized RF/SDR security research including signal identi
 
 ## 参考
 
-- `references/sdr-lab-rules.md`
-- `../wifi-wireless/` `../ot-ics/` `../hardware-security/`
+- [references/sdr-lab-rules.md](references/sdr-lab-rules.md)
+- [../wifi-wireless/](../wifi-wireless/) [../ot-ics/](../ot-ics/) [../hardware-security/](../hardware-security/)
 
 ## 路由上下文
 

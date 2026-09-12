@@ -9,8 +9,8 @@
 | IDA 安装目录 | 环境变量 `IDADIR`（目录内有 `ida.exe` 或 `ida.dll`） |
 | HTTP MCP | `http://127.0.0.1:13337/mcp` |
 | 客户端服务器名 | 只留 **`idapro`**（不要同时注册 `ida-pro-mcp`） |
-| 启动 | `scripts/start.ps1`（`--unsafe`，无 `?ext=dbg`） |
-| 开库 | 大文件优先 `scripts/open.ps1`，不要经部分客户端直调 `idb_open` |
+| 启动 | [scripts/start.ps1](scripts/start.ps1)（`--unsafe`，无 `?ext=dbg`） |
+| 开库 | 大文件优先 [scripts/open.ps1](scripts/open.ps1)，不要经部分客户端直调 `idb_open` |
 
 两个 MCP 名字指向同一 13337 会把工具注册两遍，并和 idalib worker 抢端口。
 
@@ -35,12 +35,12 @@ python -m ida_pro_mcp --install --transport streamable-http --scope global
 
 | 脚本 | 作用 |
 |------|------|
-| `scripts/start.ps1` | 健康则 `OK:<n>:reuse` 并刷新 last-healthy；端口在听但 RPC 超时视为忙，不杀；只在无人监听、缺 `py_eval`、或 tools/list 连续失败超过 3 分钟（且无 `opening.lock`）时替换 managed supervisor；永不杀 `ida.exe` |
-| `scripts/watchdog.ps1` | 每分钟巡检；健康 reuse；GUI / `open.ps1` 开库锁 / last-healthy 未满 3 分钟 → reuse；**tools/list 连续失败超过 3 分钟才 `-Force`** |
-| `scripts/recover.ps1` | 立刻 `-Force` 重启 supervisor（不杀 `ida.exe`）。HTTP 客户端把 `idapro` 标成 error 时用这个 |
-| `scripts/install-autostart.ps1` | 注册计划任务 `reverse-skill-ida-mcp`（登录 + 每分钟） |
-| `scripts/start-gui.ps1` | idalib license 失败时开 GUI 插件 |
-| `scripts/open.ps1` | HTTP 直调 `idb_open`，绕过部分客户端 schema 校验 |
+| [scripts/start.ps1](scripts/start.ps1) | 健康则 `OK:<n>:reuse` 并刷新 last-healthy；端口在听但 RPC 超时视为忙，不杀；只在无人监听、缺 `py_eval`、或 tools/list 连续失败超过 3 分钟（且无 `opening.lock`）时替换 managed supervisor；永不杀 `ida.exe` |
+| [scripts/watchdog.ps1](scripts/watchdog.ps1) | 每分钟巡检；健康 reuse；GUI / `open.ps1` 开库锁 / last-healthy 未满 3 分钟 → reuse；**tools/list 连续失败超过 3 分钟才 `-Force`** |
+| [scripts/recover.ps1](scripts/recover.ps1) | 立刻 `-Force` 重启 supervisor（不杀 `ida.exe`）。HTTP 客户端把 `idapro` 标成 error 时用这个 |
+| [scripts/install-autostart.ps1](scripts/install-autostart.ps1) | 注册计划任务 `reverse-skill-ida-mcp`（登录 + 每分钟） |
+| [scripts/start-gui.ps1](scripts/start-gui.ps1) | idalib license 失败时开 GUI 插件 |
+| [scripts/open.ps1](scripts/open.ps1) | HTTP 直调 `idb_open`，绕过部分客户端 schema 校验 |
 
 日志：`%LOCALAPPDATA%\reverse-skill\ida-mcp\supervisor.log` 与 `watchdog.log`。
 

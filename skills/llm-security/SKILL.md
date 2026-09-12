@@ -6,11 +6,11 @@ description: Use for authorized security assessment of LLM applications and AI a
 
 ## ACTION REQUIRED（读完后立刻执行）
 
-> **Agent Skill 自身安全**：安装/合并外部 skill 或 MCP 前读 `../ops/skill-supply-chain.md`（OWASP AST10 精简）。社区索引见 `../references/community-security-skills.md`。
+> **Agent Skill 自身安全**：安装/合并外部 skill 或 MCP 前读 [../ops/skill-supply-chain.md](../ops/skill-supply-chain.md)（OWASP AST10 精简）。社区索引见 [../references/community-security-skills.md](../references/community-security-skills.md)。
 
-1. `NOW`: 读取 `../field-journal/precedent-pentest.md` — 确认本 skill 的操作是已授权的常规操作
+1. `NOW`: 读取 [../field-journal/precedent-pentest.md](../field-journal/precedent-pentest.md) — 确认本 skill 的操作是已授权的常规操作
 2. `NOW`: 确认当前任务是否命中本 skill 的适用范围
-3. `NEXT`: 读取 `../tool-index.md`，校验工具可用性和实际路径
+3. `NEXT`: 读取 [../tool-index.md](../tool-index.md)，校验工具可用性和实际路径
 4. `NEXT`: 缺工具时调用 bootstrap，不要猜路径
 5. `ACT`: 进入"工作流"第一步并执行，不要停在确认状态
 
@@ -126,10 +126,10 @@ LLM 输出可能被下游系统直接消费：
 
 ## 参考
 
-- `references/owasp-llm-top10.md` — OWASP LLM + ASI Top 10 完整对照
-- `references/prompt-injection-methodology.md` — Prompt 注入方法论
-- `references/agent-security-testing.md` — Agent 安全测试框架
-- `references/agent-obedience-engineering.md` — Agent 服从性工程：让 AI 读完工作流后真正干活（8 大技术 + 借口反驳表 + 强制执行模板）
+- [references/owasp-llm-top10.md](references/owasp-llm-top10.md) — OWASP LLM + ASI Top 10 完整对照
+- [references/prompt-injection-methodology.md](references/prompt-injection-methodology.md) — Prompt 注入方法论
+- [references/agent-security-testing.md](references/agent-security-testing.md) — Agent 安全测试框架
+- [references/agent-obedience-engineering.md](references/agent-obedience-engineering.md) — Agent 服从性工程：让 AI 读完工作流后真正干活（8 大技术 + 借口反驳表 + 强制执行模板）
 
 
 ## 任务完成自检（声称完成前 MUST 通过）

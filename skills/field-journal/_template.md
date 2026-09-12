@@ -89,20 +89,20 @@
 
 > **本文件可能随仓库同步到远程，必须脱敏。完整规范见 [`anonymization.md`](anonymization.md)（占位符总表 + 自动检测脚本）。**
 
-- 目标域名/IP：用 `{target_domain}` / `{target_ip}` 替代（详见 `anonymization.md`）
+- 目标域名/IP：用 `{target_domain}` / `{target_ip}` 替代（详见 [anonymization.md](anonymization.md)）
 - 真实 URL 路径：保留结构，替换域名
 - Token/Cookie/密码/JWT/API key：用 `{token}` / `{password}` / `{api_key}` 占位
 - 用户名/手机号/邮箱：用 `{username}` / `{phone}` / `{user_email}` 占位
 - 内部 IP/端口：内网 IP 段保留前两段（`10.0.x.x`）
 - 漏洞 payload：可保留技术内容，但替换目标特征参数（如 `?id={user_id}`）
 
-提交前对照 `anonymization.md` 末尾的 **Field-Journal 必查项 checklist** 跑一遍正则扫描。
+提交前对照 [anonymization.md](anonymization.md) 末尾的 **Field-Journal 必查项 checklist** 跑一遍正则扫描。
 
 如果是私有仓库且确认不会公开，可以放宽以上限制，但仍建议脱敏。
 
 ## 索引同步（提交前最后一步）
 
-写完本日志后，必须同步更新 `_index.md`：
+写完本日志后，必须同步更新 [_index.md](_index.md)：
 
 1. 在「按场景分类」对应小节新增一行（含日期、关键词）
 2. 在「高频成功模式（按技术）」对应技术下追加本文件名
@@ -111,4 +111,4 @@
 
 ---
 <!-- [进化统计] 本包累计完成项目: N | 本次新增模式: X | 本次修复工具链问题: Y -->
-<!-- [社区贡献] 完成后询问用户是否 PR 到主仓库。流程见 CONTRIBUTE-BACK.md -->
+<!-- [社区贡献] 完成后询问用户是否 PR 到主仓库。流程见 [CONTRIBUTE-BACK.md](CONTRIBUTE-BACK.md) -->

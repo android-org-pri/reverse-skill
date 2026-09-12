@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/relay-coercion-chain.md` for the coercion checklist, relay checklist, and evidence packaging.
+- Load [references/relay-coercion-chain.md](references/relay-coercion-chain.md) for the coercion checklist, relay checklist, and evidence packaging.
 
 ## What To Preserve
 

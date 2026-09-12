@@ -182,28 +182,28 @@ Platform-specific docs:
 
 | Scenario | Entry |
 |----------|-------|
-| APK / Android analysis | `skills/apk-reverse/` |
-| iOS / mobile | `skills/mobile-reverse/` |
-| Binary reverse (exe/dll/so/elf) | `skills/ida-reverse/` / `skills/radare2/` |
-| Binary Ninja / HLIL / MLIL / MCP | `skills/binary-ninja-reverse/` |
-| .NET / C# | `skills/dotnet-reverse/` |
-| Frontend JS / encrypted params | `skills/js-reverse/` |
-| DSL VM / custom JS opcode VM | `skills/reverse-engineering/dsl-vm-reverse/` |
+| APK / Android analysis | [skills/apk-reverse/](skills/apk-reverse/) |
+| iOS / mobile | [skills/mobile-reverse/](skills/mobile-reverse/) |
+| Binary reverse (exe/dll/so/elf) | [skills/ida-reverse/](skills/ida-reverse/) / [skills/radare2/](skills/radare2/) |
+| Binary Ninja / HLIL / MLIL / MCP | [skills/binary-ninja-reverse/](skills/binary-ninja-reverse/) |
+| .NET / C# | [skills/dotnet-reverse/](skills/dotnet-reverse/) |
+| Frontend JS / encrypted params | [skills/js-reverse/](skills/js-reverse/) |
+| DSL VM / custom JS opcode VM | [skills/reverse-engineering/dsl-vm-reverse/](skills/reverse-engineering/dsl-vm-reverse/) |
 | HTTP capture / request replay | anything-analyzer, Reqable MCP + `js-reverse/` |
-| Malware / YARA | `skills/malware-analysis/` |
-| Penetration testing / scanning | `skills/pentest-tools/` |
-| Attack chain / red-team orchestration | `skills/attack-chain/` |
-| Case evidence review / report handoff | `skills/case-review/` |
-| CTF competition | `CTF-Sandbox-Orchestrator/` (42 sub-skills) |
-| Firmware / IoT | `skills/firmware-pentest/` |
-| Patch diff / N-day | `skills/patch-diff-exploit/` |
-| Pwn / exploit development | `skills/pwn-chain/` |
-| EDR bypass | `skills/edr-bypass-re/` |
-| API / GraphQL | `skills/api-security/` |
-| Supply chain / SBOM | `skills/supply-chain-security/` |
-| LLM / AI security | `skills/llm-security/` |
-| OLLVM deobfuscation | `skills/reverse-engineering/references/ollvm-deobfuscation.md` |
-| Diagrams / reports | `skills/diagram-generator/` / `skills/docs-generator/` |
+| Malware / YARA | [skills/malware-analysis/](skills/malware-analysis/) |
+| Penetration testing / scanning | [skills/pentest-tools/](skills/pentest-tools/) |
+| Attack chain / red-team orchestration | [skills/attack-chain/](skills/attack-chain/) |
+| Case evidence review / report handoff | [skills/case-review/](skills/case-review/) |
+| CTF competition | [CTF-Sandbox-Orchestrator/](CTF-Sandbox-Orchestrator/) (42 sub-skills) |
+| Firmware / IoT | [skills/firmware-pentest/](skills/firmware-pentest/) |
+| Patch diff / N-day | [skills/patch-diff-exploit/](skills/patch-diff-exploit/) |
+| Pwn / exploit development | [skills/pwn-chain/](skills/pwn-chain/) |
+| EDR bypass | [skills/edr-bypass-re/](skills/edr-bypass-re/) |
+| API / GraphQL | [skills/api-security/](skills/api-security/) |
+| Supply chain / SBOM | [skills/supply-chain-security/](skills/supply-chain-security/) |
+| LLM / AI security | [skills/llm-security/](skills/llm-security/) |
+| OLLVM deobfuscation | [skills/reverse-engineering/references/ollvm-deobfuscation.md](skills/reverse-engineering/references/ollvm-deobfuscation.md) |
+| Diagrams / reports | [skills/diagram-generator/](skills/diagram-generator/) / [skills/docs-generator/](skills/docs-generator/) |
 
 ### Key files
 
@@ -222,7 +222,7 @@ Platform-specific docs:
 | [skills/case-review/](skills/case-review/) | Read-only Evidence graph review and artifact fixity checks |
 | [skills/scripts/test-routing.ps1](skills/scripts/test-routing.ps1) | Routing regression runner (173 benchmark cases) |
 | [skills/scripts/verify-routing-coherence.ps1](skills/scripts/verify-routing-coherence.ps1) | Structure + supply-chain pin gate checks |
-| [skills/scripts/extract-summaries.ps1](skills/scripts/extract-summaries.ps1) | Regenerates INDEX.md from skill frontmatter |
+| [skills/scripts/extract-summaries.ps1](skills/scripts/extract-summaries.ps1) | Regenerates [INDEX.md](INDEX.md) from skill frontmatter |
 | [AGENTS.md](AGENTS.md) | Platform-neutral repository instructions |
 | [skills/ops/](skills/ops/) | Scope, Evidence chain, roles, timeline (skill-router form) |
 
@@ -298,7 +298,7 @@ Contributions are welcome! Fork the repo, create a feature branch, and open a PR
 This project (`reverse-skill`) is primarily licensed under the **MIT License** (see [LICENSE](LICENSE)).
 
 **Submodule and third-party dependencies:**
-- **CTF-Sandbox-Orchestrator/**: **GNU GPLv3**
+- **[CTF-Sandbox-Orchestrator/](CTF-Sandbox-Orchestrator/)**: **GNU GPLv3**
 - **Pentest Swarm AI**: Original project is **AGPL-3.0**. This repo only invokes it via CLI or MCP and does not include its source code
 - Other tools (jadx, frida, nmap, burpsuite-mcp, etc.) are subject to their respective official licenses
 

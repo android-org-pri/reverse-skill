@@ -39,7 +39,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/windows-pivot.md` for the pivot checklist, Kerberos evidence block, and common replay mistakes.
+- Load [references/windows-pivot.md](references/windows-pivot.md) for the pivot checklist, Kerberos evidence block, and common replay mistakes.
 - If the task is specifically about DPAPI masterkeys, browser or vault stores, protected blobs, or proving where a recovered DPAPI secret is accepted, prefer `$competition-dpapi-credential-chain`.
 - If the task is specifically about LSASS memory, ticket caches, replayable session material, or host-resident credential extraction, prefer `$competition-lsass-ticket-material`.
 - If the task is specifically about delegation edges, SPN trust, S4U flow, or which service accepts the delegated ticket, prefer `$competition-kerberos-delegation`.

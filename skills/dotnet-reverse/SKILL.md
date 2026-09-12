@@ -50,7 +50,7 @@ metadata:
 | 编程化操作 IL | **dnlib** | 写 C# 脚本批量改 metadata / 字符串解密器 |
 | AI 直接操作 | **dnSpy MCP** | `dnspy_decompile` / `dnspy_inspect_il` 等工具面 |
 
-> 前置：Windows 主机装 dnSpyEx + de4dot（choco 或 release）；Linux/macOS 用 `ilspycmd` + `dotnet runtime`。详见 `references/sharp-tools.md` 的安装矩阵。
+> 前置：Windows 主机装 dnSpyEx + de4dot（choco 或 release）；Linux/macOS 用 `ilspycmd` + `dotnet runtime`。详见 [references/sharp-tools.md](references/sharp-tools.md) 的安装矩阵。
 
 ## 六阶段工作流
 
@@ -86,7 +86,7 @@ diec target.exe                        # Detect It Easy CLI
 # 或拖进 dnSpyEx，看是否大量乱码类名 / 控制流变形
 ```
 
-常见混淆器 → 脱壳策略（详见 `references/obfuscators.md`）：
+常见混淆器 → 脱壳策略（详见 [references/obfuscators.md](references/obfuscators.md)）：
 
 | 混淆器 | 特征 | de4dot 处理 |
 |--------|------|------------|
@@ -145,7 +145,7 @@ dnSpyEx → 右键方法 → Edit Method (C#) 或 Edit IL
 File → Save Module → 替换原文件
 ```
 
-**IL patch 可靠性 > C# patch**：C# 重编译可能失败（缺引用、语法不对），IL 编辑几乎不会失真。详见 `references/common-workflow.md`。
+**IL patch 可靠性 > C# patch**：C# 重编译可能失败（缺引用、语法不对），IL 编辑几乎不会失真。详见 [references/common-workflow.md](references/common-workflow.md)。
 
 ## 触发场景路由
 
@@ -171,7 +171,7 @@ File → Save Module → 替换原文件
 **下游出口**:
 - IL2CPP / NativeAOT（native）→ `reverse-engineering/`
 - 深度 native .so/.dll 段分析 → `ida-reverse/` / `radare2/`
-- 需要 AI 直接操作 dnSpy → 注册并联动 dnSpy MCP（见 `references/sharp-tools.md`）
+- 需要 AI 直接操作 dnSpy → 注册并联动 dnSpy MCP（见 [references/sharp-tools.md](references/sharp-tools.md)）
 
 **同级关联模块**:
 - `reverse-engineering/languages-compiled.md`（.NET 简介指向本模块）

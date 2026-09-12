@@ -40,8 +40,8 @@ description: Use for authorized hardware and embedded interface security researc
 
 ## 参考
 
-- `references/debug-interface-triage.md`
-- `../firmware-pentest/` `../ot-ics/`
+- [references/debug-interface-triage.md](references/debug-interface-triage.md)
+- [../firmware-pentest/](../firmware-pentest/) [../ot-ics/](../ot-ics/)
 
 ## 路由上下文
 

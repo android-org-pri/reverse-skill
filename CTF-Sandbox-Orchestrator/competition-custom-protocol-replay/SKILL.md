@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/custom-protocol-replay.md` for the state-machine checklist, transcript checklist, and evidence packaging.
+- Load [references/custom-protocol-replay.md](references/custom-protocol-replay.md) for the state-machine checklist, transcript checklist, and evidence packaging.
 
 ## What To Preserve
 

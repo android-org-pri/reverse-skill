@@ -11,7 +11,7 @@ description: |
 ## ACTION REQUIRED（读完后立刻执行）
 
 1. `NOW`：确认当前任务是否命中本 skill 的适用范围
-2. `NOW`：读取 `../tool-index.md`，校验工具可用性和实际路径
+2. `NOW`：读取 [../tool-index.md](../tool-index.md)，校验工具可用性和实际路径
 3. `NEXT`：缺工具时调用 bootstrap，不要猜路径
 4. `ACT`：进入"工作流"第一步并执行，不要停在确认状态
 
@@ -32,16 +32,16 @@ For writing style, tone, and voice guidance, use `Skill(ce:writer)` with **The E
 
 | 任务类型 | 使用模板 |
 |---------|---------|
-| APK/二进制/so 逆向 | `references/security-report-templates.md` → 逆向工程报告 |
-| 渗透测试/漏洞挖掘 | `references/security-report-templates.md` → 渗透测试报告 |
-| CTF 解题 | `references/security-report-templates.md` → CTF Writeup |
-| JS/Web 签名逆向 | `references/security-report-templates.md` → 签名逆向报告 |
-| 恶意软件 / APT / 病毒分析报告 | `references/security-report-templates.md` + **`references/vendor-report-rules.md`** |
-| 通用技术文档 | `references/templates.md` → README / API 文档 |
+| APK/二进制/so 逆向 | [references/security-report-templates.md](references/security-report-templates.md) → 逆向工程报告 |
+| 渗透测试/漏洞挖掘 | [references/security-report-templates.md](references/security-report-templates.md) → 渗透测试报告 |
+| CTF 解题 | [references/security-report-templates.md](references/security-report-templates.md) → CTF Writeup |
+| JS/Web 签名逆向 | [references/security-report-templates.md](references/security-report-templates.md) → 签名逆向报告 |
+| 恶意软件 / APT / 病毒分析报告 | [references/security-report-templates.md](references/security-report-templates.md) + **[references/vendor-report-rules.md](references/vendor-report-rules.md)** |
+| 通用技术文档 | [references/templates.md](references/templates.md) → README / API 文档 |
 
 ### 厂商报告结构（Issue #65）
 
-安全类正式报告 **MUST** 读取 `references/vendor-report-rules.md`（只取结构，不抄厂商原文）。仅在任务证据或用户明确要求时选择厂商 flavor；普通逆向和其他任务使用 `flavor = null`。
+安全类正式报告 **MUST** 读取 [references/vendor-report-rules.md](references/vendor-report-rules.md)（只取结构，不抄厂商原文）。仅在任务证据或用户明确要求时选择厂商 flavor；普通逆向和其他任务使用 `flavor = null`。
 
 | Flavor / Overlay | 何时用 | 主参考骨架 |
 |------------------|--------|------------|
@@ -68,9 +68,9 @@ For writing style, tone, and voice guidance, use `Skill(ce:writer)` with **The E
 - 关键发现必须有证据支撑
 - 复现步骤必须让第三方能独立重现
 - 敏感信息（真实 token、密码、内部 URL）用占位符替代
-- **MUST** 包含 Evidence → Finding → Path 链（见 `../ops/evidence-finding-path.md` 与模板 §0）
-- **MUST** 读取 `references/vendor-report-rules.md`：选定 `malware` / `apt` 或 `flavor = null`（漏洞任务可叠加 thin `vuln`）；无 flavor 时只输出原任务模板和适用的 Base 元素，不强制 IOC/ATT&CK
-- **SHOULD** 引用 case `scope.md` / `timeline.md`（`../scripts/case-init.ps1`）
+- **MUST** 包含 Evidence → Finding → Path 链（见 [../ops/evidence-finding-path.md](../ops/evidence-finding-path.md) 与模板 §0）
+- **MUST** 读取 [references/vendor-report-rules.md](references/vendor-report-rules.md)：选定 `malware` / `apt` 或 `flavor = null`（漏洞任务可叠加 thin `vuln`）；无 flavor 时只输出原任务模板和适用的 Base 元素，不强制 IOC/ATT&CK
+- **SHOULD** 引用 case `scope.md` / `timeline.md`（[../scripts/case-init.ps1](../scripts/case-init.ps1)）
 
 ### 图表集成
 
@@ -177,9 +177,9 @@ For README, API endpoint, and file organization templates, see [references/templ
 - `reverse-engineering/` — 通用逆向完成后生成逆向报告
 - `field-journal/` — 报告内容同时作为进化日志的数据来源
 
-**安全报告模板**: `references/security-report-templates.md`
-**厂商报告规则**: `references/vendor-report-rules.md`（flavor: malware | apt | null；optional overlay: vuln）
-**通用文档模板**: `references/templates.md`
+**安全报告模板**: [references/security-report-templates.md](references/security-report-templates.md)
+**厂商报告规则**: [references/vendor-report-rules.md](references/vendor-report-rules.md)（flavor: malware | apt | null；optional overlay: vuln）
+**通用文档模板**: [references/templates.md](references/templates.md)
 
 
 ## 任务完成自检（声称完成前 MUST 通过）

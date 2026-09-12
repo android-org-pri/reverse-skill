@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/stego-media.md` for the media checklist, channel ranking guide, and evidence packaging.
+- Load [references/stego-media.md](references/stego-media.md) for the media checklist, channel ranking guide, and evidence packaging.
 
 ## What To Preserve
 

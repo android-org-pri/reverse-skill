@@ -7,7 +7,7 @@ description: Use for authorized macOS and Mach-O reverse engineering including c
 
 ## ACTION REQUIRED（读完后立刻执行）
 
-1. `NOW`: 读取 `../field-journal/precedent-reverse.md`
+1. `NOW`: 读取 [../field-journal/precedent-reverse.md](../field-journal/precedent-reverse.md)
 2. `NOW`: 确认目标为 macOS/Mach-O/App bundle（iOS IPA → `mobile-reverse/`）
 3. `NEXT`: tool-index；jtool2/lldb 等
 4. `ACT`: 签名与装载信息 → 静态 → 动态（lldb/Frida）
@@ -59,8 +59,8 @@ otool -L target
 
 ## 参考
 
-- `references/macho-triage.md`
-- `../mobile-reverse/`（iOS） `../ghidra-reverse/` `../malware-analysis/`
+- [references/macho-triage.md](references/macho-triage.md)
+- [../mobile-reverse/](../mobile-reverse/)（iOS） [../ghidra-reverse/](../ghidra-reverse/) [../malware-analysis/](../malware-analysis/)
 
 ## 路由上下文
 

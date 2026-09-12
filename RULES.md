@@ -1,6 +1,6 @@
 # Reverse Engineering / Penetration Testing / Security Task Auto-Routing Rules
 
-> **This file is the behavior-chain source of truth.** Route tables live only in `skills/config/routing.json`. Regardless of which AI editor/client you are (Claude Code, Kiro, Cursor, Cline, Windsurf, Codex CLI, Aider, Continue, Reasonix, or others), after reading this file you MUST:
+> **This file is the behavior-chain source of truth.** Route tables live only in [skills/config/routing.json](skills/config/routing.json). Regardless of which AI editor/client you are (Claude Code, Kiro, Cursor, Cline, Windsurf, Codex CLI, Aider, Continue, Reasonix, or others), after reading this file you MUST:
 > 1. Execute the hot path below — do not only acknowledge
 > 2. Keep the routing core client-neutral. Client-specific adapters are optional and MUST NOT be required by core workflows.
 
@@ -27,14 +27,14 @@ Optional later (do NOT preload):
 ```
 
 IMPORTANT — Shared installation:
-- tool-index.md is the SINGLE SOURCE OF TRUTH for tool availability
+- [tool-index.md](tool-index.md) is the SINGLE SOURCE OF TRUTH for tool availability
 - If another CLI already installed tools (tool-index shows "yes"), DO NOT reinstall
 - Only run the platform-native refresh-tool-index if you suspect tool-index is stale (e.g., user says "I just installed X")
 - Only run bootstrap for tools that are BOTH needed AND marked "no"
 
 Conditional reads (load only when needed, do NOT preload):
-- Hesitating about whether an operation is allowed → read skills/field-journal/precedent-reverse.md or precedent-pentest.md
-- Wanting to skip steps, wait for confirmation, or make excuses → read skills/llm-security/references/agent-obedience-engineering.md excuse rebuttal table
+- Hesitating about whether an operation is allowed → read [skills/field-journal/precedent-reverse.md](skills/field-journal/precedent-reverse.md) or precedent-pentest.md
+- Wanting to skip steps, wait for confirmation, or make excuses → read [skills/llm-security/references/agent-obedience-engineering.md](skills/llm-security/references/agent-obedience-engineering.md) excuse rebuttal table
 ```
 
 **Your goal is NOT a confirmation reply. Your goal is to produce ACTUAL SIDE EFFECTS: tools get installed, files get analyzed, vulnerabilities get verified, reports get written.**
@@ -153,11 +153,11 @@ Hot path only:
 ```text
 1. Identify task as security/reverse type → trigger this routing rule
 2. Detect package root path (derive from this file's location)
-3. Platform-native master-route (`.ps1` Windows / `.sh` Linux, macOS, Kali) → PRIMARY from skills/config/routing.json; use routing.md only when ambiguous
+3. Platform-native master-route (`.ps1` Windows / `.sh` Linux, macOS, Kali) → PRIMARY from [skills/config/routing.json](skills/config/routing.json); use routing.md only when ambiguous
 4. Platform-native case-init / scope.md (ops/scope-contract) — auth.status=granted + valid network profile, or explicit authorized offline sample, before any target ACT; Force never bypasses the hard gate
 5. Open PRIMARY SKILL.md ACTION REQUIRED
 6. Route not matched → propose new skill (edit routing.json + benchmark; do not hand-edit routing.md as SSoT)
-7. Read tool-index.md → confirm local tool status. If missing (first run) → template + platform-native refresh-tool-index
+7. Read [tool-index.md](tool-index.md) → confirm local tool status. If missing (first run) → template + platform-native refresh-tool-index
 8. Missing tools → platform bootstrap + refresh (Windows ps1 / Linux sh / Kali sh)
 9. Enter skill workflow → execute (timeline/workitems; Evidence→Finding→Path per ops/). At transitions, carry unchanged authoritative state by reference and emit only `decision_delta`; menus only at genuine decision boundaries.
 10. Continuously report progress (do NOT go silent)
@@ -322,7 +322,7 @@ Windows (PowerShell):
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File "<SKILL_ROOT>/skills/scripts/bootstrap-reverse.ps1" -Capability @('tool_name') -StartServices
 
-Supported capability names (must match `skills/scripts/bootstrap-manifest.json`):  
+Supported capability names (must match [skills/scripts/bootstrap-manifest.json](skills/scripts/bootstrap-manifest.json)):  
 jadx, apktool, jeb-pro, binaryninja, frida, frida-ps, idalib-mcp, reqable-mcp, jshookmcp, xquik-mcp, anything-analyzer, idapro, r2, rabin2, adb, agent-browser, ghidra-mcp, seclists, proxycat, burpsuite-mcp, nmap, pentestswarm, binwalk, yara, pwntools, bkcrack
 
 Do NOT invent capabilities. Tools not listed require manual install steps in the skill docs.

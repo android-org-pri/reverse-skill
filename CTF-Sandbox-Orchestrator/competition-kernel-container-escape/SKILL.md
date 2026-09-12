@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/kernel-container-escape.md` for isolation checklist, primitive checklist, and parity guidance.
+- Load [references/kernel-container-escape.md](references/kernel-container-escape.md) for isolation checklist, primitive checklist, and parity guidance.
 
 ## What To Preserve
 

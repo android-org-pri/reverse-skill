@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/identity-windows.md` for the ticket, host, and enterprise-messaging checklist.
+- Load [references/identity-windows.md](references/identity-windows.md) for the ticket, host, and enterprise-messaging checklist.
 - If the task is primarily a host-to-host pivot, Kerberos replay, or Windows privilege chain, prefer `$competition-windows-pivot`.
 - If the task is specifically about constrained delegation, unconstrained delegation, RBCD, S4U, or ticket-acceptance proof, prefer `$competition-kerberos-delegation`.
 - If the task is specifically about AD CS, certificate templates, EKUs, enrollment rights, PKINIT, or cert-based privilege, prefer `$competition-ad-certificate-abuse`.

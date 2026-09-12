@@ -178,28 +178,28 @@ git clone https://github.com/zhaoxuya520/reverse-skill.git
 
 | 场景 | 入口 |
 |------|------|
-| APK / Android 逆向 | `skills/apk-reverse/` |
-| iOS / 移动端 | `skills/mobile-reverse/` |
-| 二进制逆向 (exe/dll/so/elf) | `skills/ida-reverse/` / `skills/radare2/` |
-| Binary Ninja / HLIL / MLIL / MCP | `skills/binary-ninja-reverse/` |
-| .NET / C# | `skills/dotnet-reverse/` |
-| 前端 JS 签名 / 加密参数 | `skills/js-reverse/` |
-| DSL VM / 风控自定义 VM | `skills/reverse-engineering/dsl-vm-reverse/` |
+| APK / Android 逆向 | [skills/apk-reverse/](skills/apk-reverse/) |
+| iOS / 移动端 | [skills/mobile-reverse/](skills/mobile-reverse/) |
+| 二进制逆向 (exe/dll/so/elf) | [skills/ida-reverse/](skills/ida-reverse/) / [skills/radare2/](skills/radare2/) |
+| Binary Ninja / HLIL / MLIL / MCP | [skills/binary-ninja-reverse/](skills/binary-ninja-reverse/) |
+| .NET / C# | [skills/dotnet-reverse/](skills/dotnet-reverse/) |
+| 前端 JS 签名 / 加密参数 | [skills/js-reverse/](skills/js-reverse/) |
+| DSL VM / 风控自定义 VM | [skills/reverse-engineering/dsl-vm-reverse/](skills/reverse-engineering/dsl-vm-reverse/) |
 | HTTP 抓包 / 请求重放 | anything-analyzer、Reqable MCP + `js-reverse/` |
-| 恶意软件 / YARA | `skills/malware-analysis/` |
-| 渗透测试 / 漏洞扫描 | `skills/pentest-tools/` |
-| 攻击链 / 红队编排 | `skills/attack-chain/` |
-| Case 证据审查 / 报告交接 | `skills/case-review/` |
-| CTF 竞赛 | `CTF-Sandbox-Orchestrator/`（42 个子技能） |
-| 固件 / IoT | `skills/firmware-pentest/` |
-| 补丁差分 / N-day | `skills/patch-diff-exploit/` |
-| Pwn / 漏洞利用 | `skills/pwn-chain/` |
-| EDR 绕过 | `skills/edr-bypass-re/` |
-| API / GraphQL | `skills/api-security/` |
-| 供应链 / SBOM | `skills/supply-chain-security/` |
-| LLM / AI 安全 | `skills/llm-security/` |
-| OLLVM 脱密 | `skills/reverse-engineering/references/ollvm-deobfuscation.md` |
-| 图表 / 报告 | `skills/diagram-generator/` / `skills/docs-generator/` |
+| 恶意软件 / YARA | [skills/malware-analysis/](skills/malware-analysis/) |
+| 渗透测试 / 漏洞扫描 | [skills/pentest-tools/](skills/pentest-tools/) |
+| 攻击链 / 红队编排 | [skills/attack-chain/](skills/attack-chain/) |
+| Case 证据审查 / 报告交接 | [skills/case-review/](skills/case-review/) |
+| CTF 竞赛 | [CTF-Sandbox-Orchestrator/](CTF-Sandbox-Orchestrator/)（42 个子技能） |
+| 固件 / IoT | [skills/firmware-pentest/](skills/firmware-pentest/) |
+| 补丁差分 / N-day | [skills/patch-diff-exploit/](skills/patch-diff-exploit/) |
+| Pwn / 漏洞利用 | [skills/pwn-chain/](skills/pwn-chain/) |
+| EDR 绕过 | [skills/edr-bypass-re/](skills/edr-bypass-re/) |
+| API / GraphQL | [skills/api-security/](skills/api-security/) |
+| 供应链 / SBOM | [skills/supply-chain-security/](skills/supply-chain-security/) |
+| LLM / AI 安全 | [skills/llm-security/](skills/llm-security/) |
+| OLLVM 脱密 | [skills/reverse-engineering/references/ollvm-deobfuscation.md](skills/reverse-engineering/references/ollvm-deobfuscation.md) |
+| 图表 / 报告 | [skills/diagram-generator/](skills/diagram-generator/) / [skills/docs-generator/](skills/docs-generator/) |
 
 ### 关键文件
 
@@ -293,7 +293,7 @@ GitHub Actions 会在 Windows 与 Ubuntu 上执行同一套核心检查。
 本项目（`reverse-skill`）主体采用 **MIT License**（详见 [LICENSE](LICENSE)）。
 
 **子模块与第三方依赖：**
-- **CTF-Sandbox-Orchestrator/**：**GNU GPLv3**
+- **[CTF-Sandbox-Orchestrator/](CTF-Sandbox-Orchestrator/)**：**GNU GPLv3**
 - **Pentest Swarm AI**：原始项目为 **AGPL-3.0**，本仓库仅通过命令行/MCP 调用，不包含其源代码
 - 其他工具（jadx、frida、nmap、burpsuite-mcp 等）遵循各自官方许可
 

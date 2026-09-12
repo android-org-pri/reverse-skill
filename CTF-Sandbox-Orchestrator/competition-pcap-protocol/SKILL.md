@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/pcap-protocol.md` for the session checklist, decode checklist, and evidence packaging.
+- Load [references/pcap-protocol.md](references/pcap-protocol.md) for the session checklist, decode checklist, and evidence packaging.
 - If the hard part is a WebSocket or SSE handshake, subscription flow, realtime frames, or frame-driven state, prefer `$competition-websocket-runtime`.
 - If the hard part is a custom handshake, framing, checksum, sequence dependency, or deterministic replay harness, prefer `$competition-custom-protocol-replay`.
 

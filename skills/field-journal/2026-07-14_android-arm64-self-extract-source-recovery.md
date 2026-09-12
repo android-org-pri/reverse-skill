@@ -102,7 +102,7 @@ curl.exe -sS -I '<official-release-url>/radareorg/radare2/releases/latest'
 
 ## 索引同步
 
-已在 `_index.md` 的“二进制 / 固件 / CTF”分类中增加本条记录并更新统计。
+已在 [_index.md](_index.md) 的“二进制 / 固件 / CTF”分类中增加本条记录并更新统计。
 
 ---
-<!-- [社区贡献] 完成后询问用户是否 PR 到主仓库。流程见 CONTRIBUTE-BACK.md -->
+<!-- [社区贡献] 完成后询问用户是否 PR 到主仓库。流程见 [CONTRIBUTE-BACK.md](CONTRIBUTE-BACK.md) -->

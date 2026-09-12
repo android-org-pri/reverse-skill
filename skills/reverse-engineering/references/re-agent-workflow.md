@@ -179,7 +179,7 @@
 | 文件尾 > 节总和 Overlay（J） | 提取 overlay；file/熵；找加载偏移 xref | `E-overlay` |
 | .rsrc 异常大/高熵 RT_RCDATA（Q） | 提取资源；FindResource 链 + 解密 dump | `E-rsrc-payload` |
 | 运行时才加载 DLL（R） | 查 Delay Import；bp delay-load helper | `E-delay-import` |
-| while+switch 星形 CFG（H） | **See** `ollvm-deobfuscation.md`；插件失败则动态路径 | `E-cff` |
+| while+switch 星形 CFG（H） | **See** [ollvm-deobfuscation.md](ollvm-deobfuscation.md)；插件失败则动态路径 | `E-cff` |
 | 恒真/恒假分支（S） | **See** ollvm / 符号执行；动态为准 | `E-opaque-pred` |
 | `/proc/self/status` TracerPid（L） | **Linux/ELF**；hook 或 patch；Windows 主路径不强制 | `E-anti-debug-tracerpid` |
 

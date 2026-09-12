@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/cloud-metadata-path.md` for the reachability checklist, token checklist, and evidence packaging.
+- Load [references/cloud-metadata-path.md](references/cloud-metadata-path.md) for the reachability checklist, token checklist, and evidence packaging.
 - If the hard part is first proving a server-side fetch primitive, SSRF reachability, or internal endpoint traversal before metadata itself, prefer `$competition-ssrf-metadata-pivot`.
 
 ## What To Preserve

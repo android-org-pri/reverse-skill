@@ -4,7 +4,7 @@
 - action: case-init
 - command_or_ref: skills/scripts/case-init.ps1
 - result_summary: case directory created; scope ready_for_act=true
-- artifacts: [scope.md, workitems.md]
+- artifacts: [[scope.md](scope.md), [workitems.md](workitems.md)]
 - evidence_ids: []
 - next: open PRIMARY SKILL.md and ACT within scope
 
@@ -35,6 +35,6 @@
 ## 2026-08-02T01:30:00.0000000+08:00 | lead | wrap
 - action: report via docs-generator; journal anonymized
 - result_summary: report + field-journal written
-- artifacts: [report/, field-journal entry]
+- artifacts: [[report/](report/), field-journal entry]
 - evidence_ids: []
 - next: (done)

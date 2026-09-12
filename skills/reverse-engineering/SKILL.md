@@ -12,17 +12,17 @@ metadata:
 
 ## ACTION REQUIRED（读完后立刻执行）
 
-> 阶段门闩：`references/re-agent-workflow.md`（triage→static→dynamic→synthesis）。社区 RE skill 对照：`../references/community-security-skills.md`。
+> 阶段门闩：[references/re-agent-workflow.md](references/re-agent-workflow.md)（triage→static→dynamic→synthesis）。社区 RE skill 对照：[../references/community-security-skills.md](../references/community-security-skills.md)。
 
-1. `NOW`: 读取 `../field-journal/precedent-reverse.md` — 确认本 skill 的操作是已授权的常规操作
+1. `NOW`: 读取 [../field-journal/precedent-reverse.md](../field-journal/precedent-reverse.md) — 确认本 skill 的操作是已授权的常规操作
 2. `NOW`: 确认当前任务是否命中本 skill 的适用范围
-3. `NEXT`: 读取 `../tool-index.md`，校验工具可用性和实际路径
+3. `NEXT`: 读取 [../tool-index.md](../tool-index.md)，校验工具可用性和实际路径
 4. `NEXT`: 缺工具时调用 bootstrap，不要猜路径
 5. `ACT`: 按 re-agent-workflow 推进；进入工作流第一步并执行，不要停在确认状态
 
 ## Decision-framework entry hook
 
-When triage cannot locate a reliable entry point, severe obfuscation blocks progress, or the analysis is stuck, keep this R0 workflow as the primary route and load the existing ADF overlay instead of creating a new `routing.json` PRIMARY. Follow `references/re-agent-workflow.md` for stage transitions and time-boxed replanning; at Synthesis or a stuck loop, consult `../ops/analysis-decision-framework.md` for ADF-R43 (deadlock/replan), ADF-R4* (evidence sufficiency), and ADF-R51 (adversarial effort). Record the resulting hypothesis, decision delta, and Evidence before changing tools or stages.
+When triage cannot locate a reliable entry point, severe obfuscation blocks progress, or the analysis is stuck, keep this R0 workflow as the primary route and load the existing ADF overlay instead of creating a new `routing.json` PRIMARY. Follow [references/re-agent-workflow.md](references/re-agent-workflow.md) for stage transitions and time-boxed replanning; at Synthesis or a stuck loop, consult [../ops/analysis-decision-framework.md](../ops/analysis-decision-framework.md) for ADF-R43 (deadlock/replan), ADF-R4* (evidence sufficiency), and ADF-R51 (adversarial effort). Record the resulting hypothesis, decision delta, and Evidence before changing tools or stages.
 
 ## 默认沙盒上下文（Default Sandbox Context）
 
@@ -198,8 +198,8 @@ Use [field-notes.md](field-notes.md) after the first round of triage when you kn
 - 需要 IDA 反编译 → `ida-reverse/`
 - 需要 radare2 CLI 分析 → `radare2/`
 - 需要 APK 层分析 → `apk-reverse/`
-- 需要 Frida/angr 动态执行 → `tools-dynamic.md`
-- 需要绕过反调试 → `anti-analysis.md`
+- 需要 Frida/angr 动态执行 → [tools-dynamic.md](tools-dynamic.md)
+- 需要绕过反调试 → [anti-analysis.md](anti-analysis.md)
 - 遇到特定语言（Go/Rust/Python/WASM）→ `languages*.md`
 - 遇到 CTF 模式 → `patterns*.md`
 

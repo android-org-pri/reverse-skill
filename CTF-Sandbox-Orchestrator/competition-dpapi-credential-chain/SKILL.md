@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/dpapi-credential-chain.md` for the blob checklist, masterkey checklist, and evidence packaging.
+- Load [references/dpapi-credential-chain.md](references/dpapi-credential-chain.md) for the blob checklist, masterkey checklist, and evidence packaging.
 
 ## What To Preserve
 

@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/browser-persistence.md` for the browser-state checklist, service-worker checklist, and evidence packaging.
+- Load [references/browser-persistence.md](references/browser-persistence.md) for the browser-state checklist, service-worker checklist, and evidence packaging.
 
 ## What To Preserve
 

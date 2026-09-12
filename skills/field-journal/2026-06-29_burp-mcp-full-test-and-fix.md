@@ -132,10 +132,10 @@ activeAudit.addRequest(seedReq);
 
 ## 索引同步（提交前最后一步）
 
-写完本日志后，必须同步更新 `_index.md`：
+写完本日志后，必须同步更新 [_index.md](_index.md)：
 
 1. 在「按场景分类」对应小节新增一行（含日期、关键词）
 2. 更新「累计统计」的计数与"最近更新"日期
 
 ---
-<!-- [社区贡献] 完成后询问用户是否 PR 到主仓库。流程见 CONTRIBUTE-BACK.md -->
+<!-- [社区贡献] 完成后询问用户是否 PR 到主仓库。流程见 [CONTRIBUTE-BACK.md](CONTRIBUTE-BACK.md) -->

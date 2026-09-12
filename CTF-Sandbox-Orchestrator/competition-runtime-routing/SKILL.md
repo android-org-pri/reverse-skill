@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/runtime-routing.md` for the routing checklist, header matrix, and evidence packaging.
+- Load [references/runtime-routing.md](references/runtime-routing.md) for the routing checklist, header matrix, and evidence packaging.
 - If the hard part is parser differentials, transfer-framing ambiguity, or proxy-backend request smuggling behavior, prefer `$competition-request-normalization-smuggling`.
 
 ## What To Preserve

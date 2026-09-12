@@ -41,8 +41,8 @@ description: Use for authorized database security assessment covering PostgreSQL
 
 ## 参考
 
-- `references/db-misconfig-checklist.md`
-- `../pentest-tools/` `../cloud-k8s/`
+- [references/db-misconfig-checklist.md](references/db-misconfig-checklist.md)
+- [../pentest-tools/](../pentest-tools/) [../cloud-k8s/](../cloud-k8s/)
 
 ## 路由上下文
 

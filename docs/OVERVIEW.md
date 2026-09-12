@@ -63,8 +63,8 @@ Report + field journal
 |---|---|---|
 | Windows | Full primary path | `README.md`, PowerShell scripts |
 | Kali Linux | Specialized support | `kali/README-kali.md` |
-| Ubuntu / Debian Linux | Generic support | `platforms/linux.md`, `skills/scripts/bootstrap-reverse.sh`, `skills/scripts/refresh-tool-index.sh` |
-| macOS | Generic support | `platforms/macos.md`, `skills/scripts/bootstrap-reverse.sh`, `skills/scripts/refresh-tool-index.sh` |
+| Ubuntu / Debian Linux | Generic support | [platforms/linux.md](platforms/linux.md), `skills/scripts/bootstrap-reverse.sh`, `skills/scripts/refresh-tool-index.sh` |
+| macOS | Generic support | [platforms/macos.md](platforms/macos.md), `skills/scripts/bootstrap-reverse.sh`, `skills/scripts/refresh-tool-index.sh` |
 
 See [PLATFORMS.md](PLATFORMS.md) for the full platform matrix. Ordinary Linux and macOS users can list bootstrap capabilities with:
 

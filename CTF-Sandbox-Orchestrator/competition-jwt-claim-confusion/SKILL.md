@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/jwt-claim-confusion.md` for the header checklist, claim checklist, and evidence packaging.
+- Load [references/jwt-claim-confusion.md](references/jwt-claim-confusion.md) for the header checklist, claim checklist, and evidence packaging.
 
 ## What To Preserve
 

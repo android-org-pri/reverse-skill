@@ -77,7 +77,7 @@ cdb -g -G C:\Windows\System32\where.exe cmd
 
 ## 索引同步
 
-已更新 `_index.md` 的统计与“工具链与环境”分类。
+已更新 [_index.md](_index.md) 的统计与“工具链与环境”分类。
 
 ---
 <!-- [社区贡献] 本地记录已完成。 -->

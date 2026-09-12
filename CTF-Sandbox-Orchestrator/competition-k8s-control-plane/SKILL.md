@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/k8s-control-plane.md` for the RBAC checklist, controller checklist, and evidence packaging.
+- Load [references/k8s-control-plane.md](references/k8s-control-plane.md) for the RBAC checklist, controller checklist, and evidence packaging.
 - If the hard part is metadata-service reachability, workload identity, instance credentials, or metadata-derived privilege, prefer `$competition-cloud-metadata-path`.
 
 ## What To Preserve

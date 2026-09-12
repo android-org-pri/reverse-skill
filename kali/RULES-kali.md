@@ -85,21 +85,21 @@
 
 ## 路由入口
 
-> **检测方法**：找到本文件（`RULES-kali.md`）所在目录的父目录即为包根目录。
+> **检测方法**：找到本文件（[RULES-kali.md](RULES-kali.md)）所在目录的父目录即为包根目录。
 
 热路径（与 `RULES.md` / `routing.json` 相同）：
 
 1. `skills/scripts/master-route.sh -Hint "<任务>"` — PRIMARY
 2. `skills/scripts/case-init.sh` — `scope.md`；`auth.status=granted` 前禁止对目标 ACT
 3. PRIMARY `SKILL.md` ACTION REQUIRED
-4. `skills/tool-index.md` — 真路径；缺则 `kali/scripts/bootstrap-reverse.sh`
+4. [skills/tool-index.md](skills/tool-index.md) — 真路径；缺则 `kali/scripts/bootstrap-reverse.sh`
 
 ---
 
 ## 执行原则（与 Windows 版一致，仅命令不同）
 
 ### 工具使用
-- **永远不要猜工具路径**，先读 `tool-index.md`
+- **永远不要猜工具路径**，先读 [tool-index.md](tool-index.md)
 - 缺少工具时先调用 `bootstrap-reverse.sh` 自动补齐
 - Kali 大量工具预装，bootstrap 失败概率远低于 Windows
 - 同一工具自动安装失败 2 次后，停止重试，输出手动步骤

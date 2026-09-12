@@ -8,8 +8,8 @@
 
 从本次版本开始，所有新建 skill 都必须自带“强执行骨架”，避免 AI 读完不执行：
 
-1. `MUST` 在 `SKILL.md` 顶部加入 `ACTION REQUIRED` 区块，写清楚读完后立刻执行的 3-5 步。
-2. `MUST` 在 `SKILL.md` 末尾加入“任务完成自检”区块，未通过不得宣称完成。
+1. `MUST` 在 [SKILL.md](SKILL.md) 顶部加入 `ACTION REQUIRED` 区块，写清楚读完后立刻执行的 3-5 步。
+2. `MUST` 在 [SKILL.md](SKILL.md) 末尾加入“任务完成自检”区块，未通过不得宣称完成。
 3. `MUST` 使用 RFC 2119 术语（`MUST/MUST NOT/SHOULD/MAY`），避免建议式语气。
 4. `MUST` 明确“缺工具唯一动作是 bootstrap”，禁止猜路径与手工乱装。
 5. `MUST` 明确“路由未命中时需要提议新增 skill”，不要硬塞现有模块。
@@ -45,9 +45,9 @@ skills/
 
 ---
 
-## 3. SKILL.md 必须包含的内容
+## 3. [SKILL.md](SKILL.md) 必须包含的内容
 
-每个新 skill 的 `SKILL.md` 必须包含以下章节：
+每个新 skill 的 [SKILL.md](SKILL.md) 必须包含以下章节：
 
 ```markdown
 ---
@@ -91,7 +91,7 @@ description: <一句话描述适用场景和触发条件>
 **同级关联模块**: ...
 ```
 
-### 3.1 强执行模板补丁（必须复制到新 SKILL.md）
+### 3.1 强执行模板补丁（必须复制到新 [SKILL.md](SKILL.md)）
 
 除上面的基础章节外，新增 skill 的模板必须包含以下两个硬性块：
 
@@ -116,7 +116,7 @@ description: <一句话描述适用场景和触发条件>
 ## ACTION REQUIRED（读完后立刻执行）
 1. `NOW`: 读取 `../field-journal/precedent-reverse.md`（逆向类）或 `../field-journal/precedent-pentest.md`（渗透类）— 确认本 skill 的操作是已授权的常规操作
 2. `NOW`: 确认当前任务是否命中本 skill 的适用范围
-3. `NEXT`: 读取 `../tool-index.md`，校验工具可用性和实际路径
+3. `NEXT`: 读取 [../tool-index.md](../tool-index.md)，校验工具可用性和实际路径
 4. `NEXT`: 缺工具时调用 bootstrap，不要猜路径
 5. `ACT`: 进入"工作流"第一步并执行，不要停在确认状态
 ```
@@ -126,7 +126,7 @@ description: <一句话描述适用场景和触发条件>
 
 ### 3.3 语言行为契约（Language Behavior Contract）
 
-每个新建 skill 的 `SKILL.md` 中 `MUST` 包含语言行为契约，明确 AI 在内部推理和用户交互时的语言选择：
+每个新建 skill 的 [SKILL.md](SKILL.md) 中 `MUST` 包含语言行为契约，明确 AI 在内部推理和用户交互时的语言选择：
 
 ```markdown
 ## 语言行为契约
@@ -149,7 +149,7 @@ description: <一句话描述适用场景和触发条件>
 
 ### 3.4 下一步菜单模式（Next-Step Menu Pattern）
 
-每个新建 skill 只在 **genuine decision boundary**（两个或以上 materially different、evidence-supported 分支，且用户选择会改变下一动作）提供 3-6 个编号选项。若 transition 是确定性的，`MUST` 直接继续，并按 `ops/timeline-workitem.md` 记录 `decision_delta` + `carry_forward_refs`，不要重新展开 unchanged context。
+每个新建 skill 只在 **genuine decision boundary**（两个或以上 materially different、evidence-supported 分支，且用户选择会改变下一动作）提供 3-6 个编号选项。若 transition 是确定性的，`MUST` 直接继续，并按 [ops/timeline-workitem.md](ops/timeline-workitem.md) 记录 `decision_delta` + `carry_forward_refs`，不要重新展开 unchanged context。
 
 格式要求：
 
@@ -169,7 +169,7 @@ description: <一句话描述适用场景和触发条件>
 5. 暂停，我先确认前面的证据
 ```
 
-在 SKILL.md 中把此模式放到真正有分岔的 decision boundary；不要机械地放到每个阶段末尾。
+在 [SKILL.md](SKILL.md) 中把此模式放到真正有分岔的 decision boundary；不要机械地放到每个阶段末尾。
 
 ---
 
@@ -178,7 +178,7 @@ description: <一句话描述适用场景和触发条件>
 
 ### 4.1 在 `bootstrap-manifest.json` 中注册能力
 
-打开 `scripts/bootstrap-manifest.json`，在 `capabilities` 数组中添加条目：
+打开 [scripts/bootstrap-manifest.json](scripts/bootstrap-manifest.json)，在 `capabilities` 数组中添加条目：
 
 ```json
 {
@@ -203,7 +203,7 @@ description: <一句话描述适用场景和触发条件>
 
 ### 4.2 在 `ToolDiscovery.ps1` 中注册工具
 
-打开 `scripts/lib/ToolDiscovery.ps1`，在 `Get-ReverseToolCatalog` 函数中添加条目：
+打开 [scripts/lib/ToolDiscovery.ps1](scripts/lib/ToolDiscovery.ps1)，在 `Get-ReverseToolCatalog` 函数中添加条目：
 
 ```powershell
 [pscustomobject]@{
@@ -253,14 +253,14 @@ if (-not $spec.Available) {
 1. 在 `skills/tests/routing-benchmark.json` **先**加一条（最好中英各一）失败用例
 2. 只改 `skills/config/routing.json`（`routes` + `priority`）
 3. 同步 `skills/MASTER-ROUTING.md` 优先级表（顺序必须与 `priority` 一致）
-4. `routing.md` 是歧义附录，不是 SSoT；不要只改 markdown 表
+4. [routing.md](routing.md) 是歧义附录，不是 SSoT；不要只改 markdown 表
 5. 跑 `test-routing.ps1` 与 `verify-routing-coherence.ps1`
 
 不要为「路由没打中」就新建 PRIMARY。先加 keyword。新 PRIMARY 必须有独立工具链 **和** 至少 2 条基准用例。
 
-### 5.2 更新根 SKILL.md / INDEX
+### 5.2 更新根 [SKILL.md](SKILL.md) / INDEX
 
-打开 `skills/SKILL.md` 模块表；跑 `extract-summaries.ps1` 重生 `INDEX.md`。
+打开 `skills/SKILL.md` 模块表；跑 `extract-summaries.ps1` 重生 [INDEX.md](INDEX.md)。
 
 ### 5.3 不要写客户端全局规则
 
@@ -282,7 +282,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "<SKILL_ROOT>\skills\scripts
 bash "<项目根目录>/kali/scripts/refresh-tool-index.sh"
 ```
 
-确认新工具出现在 `tool-index.md` 和 `tool-index.json` 中。
+确认新工具出现在 [tool-index.md](tool-index.md) 和 `tool-index.json` 中。
 
 ---
 
@@ -325,14 +325,14 @@ bash "<项目根目录>/kali/scripts/refresh-tool-index.sh"
 **通用（必须）**：
 - [ ] `<new-skill>/SKILL.md` 存在且包含所有必需章节
 - [ ] `routing-benchmark.json` 已先添加用例，`routing.json` 已更新且能正确路由到新 skill
-- [ ] `MASTER-ROUTING.md` 优先级表已同步；`routing.md` 歧义附录已按需更新
-- [ ] 根 `SKILL.md` 的模块表已更新
+- [ ] [MASTER-ROUTING.md](MASTER-ROUTING.md) 优先级表已同步；[routing.md](routing.md) 歧义附录已按需更新
+- [ ] 根 [SKILL.md](SKILL.md) 的模块表已更新
 - [ ] `.kiro/steering/reverse-routing.md` 触发关键词已更新（如果使用 Kiro）
 - [ ] `RULES.md` 触发关键词已更新
 
 **Windows 平台**：
-- [ ] `scripts/bootstrap-manifest.json` 已注册新工具
-- [ ] `scripts/lib/ToolDiscovery.ps1` 已注册新工具（含 fallback path）
+- [ ] [scripts/bootstrap-manifest.json](scripts/bootstrap-manifest.json) 已注册新工具
+- [ ] [scripts/lib/ToolDiscovery.ps1](scripts/lib/ToolDiscovery.ps1) 已注册新工具（含 fallback path）
 - [ ] `skills/scripts/refresh-tool-index.ps1` 的 `$scriptRefs` 已更新
 
 **Kali 平台（如果有 kali/ 目录）**：
@@ -450,7 +450,7 @@ skills/ghidra-headless/
   "startCommand": "pnpm",
   "startArgs": ["dev"],
   "mcpNames": ["<mcp-server-name>"],
-  "mcpUrl": "http://localhost:<port>/mcp",
+  "mcpUrl": "http://localhost: 37 /mcp",
   "servicePort": <port>,
   "docsUrl": "https://github.com/xxx/yyy",
   "canAutoInstall": true,
@@ -476,7 +476,7 @@ skills/ghidra-headless/
   "bootstrapKind": "local-http-mcp",
   "dependsOn": ["<tool-name>"],
   "mcpNames": ["<mcp-server-name>"],
-  "mcpUrl": "http://127.0.0.1:<port>/mcp",
+  "mcpUrl": "http://127.0.0.1: 45 /mcp",
   "servicePort": <port>,
   "startScript": "%SKILL_ROOT%\\<skill-dir>\\scripts\\start.ps1",
   "docsUrl": "...",
@@ -547,7 +547,7 @@ Write-Output "ERR:timeout:$Port"
 
 ### 10.5 编写失败引导
 
-在 skill 的 `SKILL.md` 中，必须包含一段"MCP 服务不可用时的手动配置指引"：
+在 skill 的 [SKILL.md](SKILL.md) 中，必须包含一段"MCP 服务不可用时的手动配置指引"：
 
 ```markdown
 ### MCP 服务手动配置
@@ -565,7 +565,7 @@ MCP 配置示例：
 {
   "mcpServers": {
     "<server-name>": {
-      "url": "http://localhost:<port>/mcp"
+      "url": "http://localhost: 53 /mcp"
     }
   }
 }
@@ -609,7 +609,7 @@ MCP 配置示例：
 - 检测端口是否在线
 - 如果不在线，输出 `manualInstallHint` 引导用户
 
-**SKILL.md 中的 bootstrap 章节：**
+**[SKILL.md](SKILL.md) 中的 bootstrap 章节：**
 ```markdown
 ## 按需自举
 
@@ -632,7 +632,7 @@ docker run -d -p 8775:8775 xxx/sqlmap-mcp
 - [ ] `servicePort` 与实际服务端口一致
 - [ ] `mcpUrl` 格式正确（含 `/mcp` 路径或实际 endpoint）
 - [ ] 如果是本地服务型，有 `scripts/start.ps1` 或等价启动脚本
-- [ ] SKILL.md 中有手动配置引导
+- [ ] [SKILL.md](SKILL.md) 中有手动配置引导
 - [ ] `canAutoInstall` 准确反映是否真的能全自动（不要虚标）
 - [ ] 运行 `refresh-tool-index.ps1` 后，capability 视图中能看到新 MCP 的注册和在线状态
 

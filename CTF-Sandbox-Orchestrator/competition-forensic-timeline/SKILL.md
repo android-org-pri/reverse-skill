@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/forensic-timeline.md` for anchor selection, cross-source correlation, and evidence packaging.
+- Load [references/forensic-timeline.md](references/forensic-timeline.md) for anchor selection, cross-source correlation, and evidence packaging.
 - If the hard part is packet reassembly, protocol framing, or transferred-object extraction from a capture, prefer `$competition-pcap-protocol`.
 
 ## What To Preserve

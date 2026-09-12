@@ -41,8 +41,8 @@ description: Use for authorized assessment of federated identity systems includi
 
 ## 参考
 
-- `references/sso-flow-checklist.md`
-- `../api-security/` `../windows-ad/`（企业 IdP）
+- [references/sso-flow-checklist.md](references/sso-flow-checklist.md)
+- [../api-security/](../api-security/) [../windows-ad/](../windows-ad/)（企业 IdP）
 
 ## 路由上下文
 

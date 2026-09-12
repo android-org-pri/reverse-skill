@@ -56,13 +56,13 @@ Reply in Simplified Chinese unless the user explicitly requests English. Keep co
 
 Load only the relevant reference files. Do not bulk-load every reference.
 
-- Web, API, frontend, workers, routing: read `references/web-api.md`
-- Reverse, malware, DFIR, native, pwn: read `references/reverse-native.md`
-- Crypto, stego, mobile: read `references/crypto-mobile.md`
-- AI agent, prompt injection, cloud, containers, CI/CD: read `references/agent-cloud.md`
-- Identity, AD, Windows host, enterprise messaging: read `references/identity-windows.md`
-- Routing matrix and child-skill selection rules: read `references/router-matrix.md`
-- Result formatting and evidence packaging: read `references/reporting.md`
+- Web, API, frontend, workers, routing: read [references/web-api.md](references/web-api.md)
+- Reverse, malware, DFIR, native, pwn: read [references/reverse-native.md](references/reverse-native.md)
+- Crypto, stego, mobile: read [references/crypto-mobile.md](references/crypto-mobile.md)
+- AI agent, prompt injection, cloud, containers, CI/CD: read [references/agent-cloud.md](references/agent-cloud.md)
+- Identity, AD, Windows host, enterprise messaging: read [references/identity-windows.md](references/identity-windows.md)
+- Routing matrix and child-skill selection rules: read [references/router-matrix.md](references/router-matrix.md)
+- Result formatting and evidence packaging: read [references/reporting.md](references/reporting.md)
 
 If the task is clearly dominated by one domain and the specialized skill exists, route to it internally from this skill. Treat every child skill below as downstream-only. Prefer this internal routing flow over making the user invoke child skills manually:
 

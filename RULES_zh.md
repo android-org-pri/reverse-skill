@@ -1,6 +1,6 @@
 # 逆向/渗透/安全任务自动路由规则
 
-> **本文件是行为链中文副本。** 路由表只在 `skills/config/routing.json`。无论你是什么 AI 编辑器/客户端，读完后必须执行热路径，不要只确认。
+> **本文件是行为链中文副本。** 路由表只在 [skills/config/routing.json](skills/config/routing.json)。无论你是什么 AI 编辑器/客户端，读完后必须执行热路径，不要只确认。
 
 ---
 
@@ -25,7 +25,7 @@
 
 ## 客户端集成边界
 
-`skills/`、路由配置、测试、工具清单、case 产物和报告共同构成平台无关核心。Claude Code、Codex、Cursor、OpenCode 或其他 Agent 可以通过各自的项目指令或 skill 适配层加载本仓库，但核心路由与测试不得依赖任何特定客户端文件。
+[skills/](skills/)、路由配置、测试、工具清单、case 产物和报告共同构成平台无关核心。Claude Code、Codex、Cursor、OpenCode 或其他 Agent 可以通过各自的项目指令或 skill 适配层加载本仓库，但核心路由与测试不得依赖任何特定客户端文件。
 
 核心脚本禁止写入客户端全局配置。可选适配器应放在独立的平台文档或适配包中，并保持一致的路由语义。
 
@@ -126,23 +126,23 @@
 
 ## 路由入口
 
-> **检测方法**：找到本文件（`RULES.md`）所在目录即为包根目录。不要假设固定盘符。
+> **检测方法**：找到本文件（[RULES.md](RULES.md)）所在目录即为包根目录。不要假设固定盘符。
 
 按热路径执行：
 
-1. `skills/scripts/master-route.ps1 -Hint "<任务>"` — 从 `skills/config/routing.json` 选出 PRIMARY
+1. `skills/scripts/master-route.ps1 -Hint "<任务>"` — 从 [skills/config/routing.json](skills/config/routing.json) 选出 PRIMARY
 2. `skills/<PRIMARY>/SKILL.md` — 进入目标模块并执行 ACTION REQUIRED
-3. `skills/tool-index.md` — 需要本机工具时查询真实状态与路径
-4. `skills/routing.md` — 仅在 PRIMARY 歧义时读取的三轴附录，不是第二套路由器
+3. [skills/tool-index.md](skills/tool-index.md) — 需要本机工具时查询真实状态与路径
+4. [skills/routing.md](skills/routing.md) — 仅在 PRIMARY 歧义时读取的三轴附录，不是第二套路由器
 
 ---
 
 ## 执行原则
 
-> **决策质量（Issue #77）：** 假设退出、validated 充分性（R4*）、结论锚定与死锁重规划见 skills/ops/analysis-decision-framework.md。**不要**把 R1-R51 全文塞进本文件。
+> **决策质量（Issue #77）：** 假设退出、validated 充分性（R4*）、结论锚定与死锁重规划见 [skills/ops/analysis-decision-framework.md](skills/ops/analysis-decision-framework.md)。**不要**把 R1-R51 全文塞进本文件。
 
 ### 工具使用
-- **永远不要猜工具路径**，先读 `tool-index.md`
+- **永远不要猜工具路径**，先读 [tool-index.md](tool-index.md)
 - 缺少工具时先调用平台对应的 bootstrap 脚本自动补齐，不要直接报错：
   - Windows：`bootstrap-reverse.ps1`
   - Linux / macOS：`bash skills/scripts/bootstrap-reverse.sh`
@@ -277,7 +277,7 @@
 | burpsuite | 9876 | BurpSuite 78 工具全控制（Proxy/Intruder/Repeater/Scanner/Collaborator） | Burp 启动后扩展自动加载 |
 
 使用 MCP 工具前：
-1. 先确认 `tool-index.md` 中该服务的 `MCP 已注册` 状态
+1. 先确认 [tool-index.md](tool-index.md) 中该服务的 `MCP 已注册` 状态
 2. 如果未注册 → 调用 bootstrap 注册
 3. 如果已注册但端口无响应 → 扫描端口范围（IDA: 13337-13350）或尝试启动服务
 4. IDA MCP 特别注意：**不要硬编码 13337**，每次新开文件端口可能变化，检查 IDA Output 窗口的 `[MCP] port=xxxxx` 日志
@@ -375,7 +375,7 @@ gamma -> --destructive false
 - ❌ 不要反复重试已失败 2 次的自动安装
 - ❌ 不要沉默 — 遇到问题必须立即告知用户
 - ❌ 不要自己编造工具版本号或功能描述
-- ❌ 不要读完 RULES.md 后只回复"已理解，请告诉我具体任务" — 正确做法是运行 master-route.ps1 → 打开 PRIMARY SKILL.md → 开始执行；仅在歧义时查 routing.md
+- ❌ 不要读完 [RULES.md](RULES.md) 后只回复"已理解，请告诉我具体任务" — 正确做法是运行 master-route.ps1 → 打开 PRIMARY SKILL.md → 开始执行；仅在歧义时查 routing.md
 - ❌ 不要说"步骤 1-4 已经完成"但实际只是读了一遍 — 区分"已读文档"和"已执行操作"，后者产生实际副作用
 - ❌ 不要在每一步都等用户确认 — 确定性的步骤直接执行同时告知用户，只在真正需要用户决策的节点暂停
 
@@ -436,7 +436,7 @@ gamma -> --destructive false
 2. 在 `routing.json` 添加关键词或新 PRIMARY，并同步 `MASTER-ROUTING.md` 优先级表
 3. 按需在 `routing.md` 三轴附录中补充说明；不得把它当作事实源
 4. 如果内容足够独立，按 CONTRIBUTING.md 流程新增 skill 目录
-5. 更新 skills/SKILL.md 的模块表
+5. 更新 [skills/SKILL.md](skills/SKILL.md) 的模块表
 
 ### 搜索质量要求
 
@@ -467,7 +467,7 @@ Kali Linux（Bash，含 Kali 原生工具链）：
 bash <本包根目录>/kali/scripts/bootstrap-reverse.sh 工具名 --start-services
 ```
 
-支持的能力名（与 `skills/scripts/bootstrap-manifest.json` 保持一致，共 26 项）：jadx、apktool、jeb-pro、binaryninja、frida、frida-ps、idalib-mcp、reqable-mcp、jshookmcp、xquik-mcp、anything-analyzer、idapro、r2、rabin2、adb、agent-browser、ghidra-mcp、seclists、proxycat、burpsuite-mcp、nmap、pentestswarm、binwalk、yara、pwntools、bkcrack
+支持的能力名（与 [skills/scripts/bootstrap-manifest.json](skills/scripts/bootstrap-manifest.json) 保持一致，共 26 项）：jadx、apktool、jeb-pro、binaryninja、frida、frida-ps、idalib-mcp、reqable-mcp、jshookmcp、xquik-mcp、anything-analyzer、idapro、r2、rabin2、adb、agent-browser、ghidra-mcp、seclists、proxycat、burpsuite-mcp、nmap、pentestswarm、binwalk、yara、pwntools、bkcrack
 
 ## 刷新工具索引
 
@@ -495,14 +495,14 @@ bash <本包根目录>/kali/scripts/refresh-tool-index.sh
 
 路径：`<本包根目录>/skills/CONTRIBUTING.md`
 
-新增后必须同步更新：routing-benchmark.json、routing.json、MASTER-ROUTING.md、skills/SKILL.md；涉及工具时再更新 bootstrap-manifest.json、ToolDiscovery.ps1 和 refresh-tool-index.ps1。`routing.md` 仅作为歧义附录按需同步。
+新增后必须同步更新：routing-benchmark.json、routing.json、MASTER-ROUTING.md、[skills/SKILL.md](skills/SKILL.md)；涉及工具时再更新 bootstrap-manifest.json、ToolDiscovery.ps1 和 refresh-tool-index.ps1。`routing.md` 仅作为歧义附录按需同步。
 
 ---
 
 ## 全局注入内容（精简版）
 
 > **这是写入全局配置文件的内容。** 首次配置时由 AI 提取本段写入，之后每次触发关键词时自动加载。
-> 本段不包含"读 RULES.md"指令——那会导致每次触发都重复走首次配置流程。
+> 本段不包含"读 [RULES.md](RULES.md)"指令——那会导致每次触发都重复走首次配置流程。
 
 ### 触发关键词
 

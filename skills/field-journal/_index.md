@@ -17,7 +17,7 @@
 
 - [2026-08-20 Flutter AOT 服务端驱动广告去除（Blutter + 等长字符串替换）](./2026-08-20_apk-flutter-banner-ad-removal.md)
 - [2026-05-15-cellular-pro-mumu-ksad-fragment-fix](./2026-05-15-cellular-pro-mumu-ksad-fragment-fix.md)
-- [[种子] seed-008_apk-okhttp-ssl-pin-bypass](./seed-008_apk-okhttp-ssl-pin-bypass.md)
+- [[种子] seed-008_apk-okhttp-ssl-pin-bypass]([./seed-008_apk-okhttp-ssl-pin-bypass.md](./seed-008_apk-okhttp-ssl-pin-bypass.md))
 
 ### 二进制 / 固件 / CTF
 
@@ -25,12 +25,12 @@
 - [2026-07-22 Electron Bytenode 特权更新链分析](./2026-07-22_electron-bytenode-privileged-update-chain.md)
 - [2026-07-14_android-arm64-self-extract-source-recovery](./2026-07-14_android-arm64-self-extract-source-recovery.md)
 - [2026-05-15_lumine-go-reverse](./2026-05-15_lumine-go-reverse.md)
-- [[种子] seed-001_elf-packed-loader](./seed-001_elf-packed-loader.md)
-- [[种子] seed-002_go-malware-stripped](./seed-002_go-malware-stripped.md)
-- [[种子] seed-010_ctf-pwn-rop-x64](./seed-010_ctf-pwn-rop-x64.md)
-- [[种子] seed-011_pcap-protocol-reverse](./seed-011_pcap-protocol-reverse.md)
-- [[种子] seed-014_unity-il2cpp-reverse](./seed-014_unity-il2cpp-reverse.md)
-- [[种子] seed-015_iot-firmware-uart](./seed-015_iot-firmware-uart.md)
+- [[种子] seed-001_elf-packed-loader]([./seed-001_elf-packed-loader.md](./seed-001_elf-packed-loader.md))
+- [[种子] seed-002_go-malware-stripped]([./seed-002_go-malware-stripped.md](./seed-002_go-malware-stripped.md))
+- [[种子] seed-010_ctf-pwn-rop-x64]([./seed-010_ctf-pwn-rop-x64.md](./seed-010_ctf-pwn-rop-x64.md))
+- [[种子] seed-011_pcap-protocol-reverse]([./seed-011_pcap-protocol-reverse.md](./seed-011_pcap-protocol-reverse.md))
+- [[种子] seed-014_unity-il2cpp-reverse]([./seed-014_unity-il2cpp-reverse.md](./seed-014_unity-il2cpp-reverse.md))
+- [[种子] seed-015_iot-firmware-uart]([./seed-015_iot-firmware-uart.md](./seed-015_iot-firmware-uart.md))
 
 ### Web / API / 渗透测试
 
@@ -44,17 +44,17 @@
 - [2026-05-25_pentest-cf-access-sibling-subdomain-cookie-poisoning](./2026-05-25_pentest-cf-access-sibling-subdomain-cookie-poisoning.md)
 - [2026-05-17_pentest-vue-spa-actuator-leak](./2026-05-17_pentest-vue-spa-actuator-leak.md)
 - [2026-05-16_pentest-personalblog-fun-mass-assignment](./2026-05-16_pentest-personalblog-fun-mass-assignment.md)
-- [[种子] seed-003_web-api-auth-bypass](./seed-003_web-api-auth-bypass.md)
-- [[种子] seed-004_js-sign-webpack](./seed-004_js-sign-webpack.md)
-- [[种子] seed-006_ssrf-cloud-metadata](./seed-006_ssrf-cloud-metadata.md)
-- [[种子] seed-017_xxe-oob-exfil](./seed-017_xxe-oob-exfil.md)
+- [[种子] seed-003_web-api-auth-bypass]([./seed-003_web-api-auth-bypass.md](./seed-003_web-api-auth-bypass.md))
+- [[种子] seed-004_js-sign-webpack]([./seed-004_js-sign-webpack.md](./seed-004_js-sign-webpack.md))
+- [[种子] seed-006_ssrf-cloud-metadata]([./seed-006_ssrf-cloud-metadata.md](./seed-006_ssrf-cloud-metadata.md))
+- [[种子] seed-017_xxe-oob-exfil]([./seed-017_xxe-oob-exfil.md](./seed-017_xxe-oob-exfil.md))
 
 ### 企业内网 / 云安全
 
-- [[种子] seed-005_ad-certipy-esc1](./seed-005_ad-certipy-esc1.md)
-- [[种子] seed-007_ntlm-relay-coercer](./seed-007_ntlm-relay-coercer.md)
-- [[种子] seed-013_kerberoasting-spn](./seed-013_kerberoasting-spn.md)
-- [[种子] seed-016_k8s-container-escape](./seed-016_k8s-container-escape.md)
+- [[种子] seed-005_ad-certipy-esc1]([./seed-005_ad-certipy-esc1.md](./seed-005_ad-certipy-esc1.md))
+- [[种子] seed-007_ntlm-relay-coercer]([./seed-007_ntlm-relay-coercer.md](./seed-007_ntlm-relay-coercer.md))
+- [[种子] seed-013_kerberoasting-spn]([./seed-013_kerberoasting-spn.md](./seed-013_kerberoasting-spn.md))
+- [[种子] seed-016_k8s-container-escape]([./seed-016_k8s-container-escape.md](./seed-016_k8s-container-escape.md))
 
 ### iOS 逆向
 
@@ -71,7 +71,7 @@
 ### 其他
 
 - [2026-08-08 开放 PR 价值分级与安全集成](./2026-08-08_pr-value-triage-and-safe-integration.md)
-- [[种子] seed-012_log4shell-jndi-rce](./seed-012_log4shell-jndi-rce.md)
+- [[种子] seed-012_log4shell-jndi-rce]([./seed-012_log4shell-jndi-rce.md](./seed-012_log4shell-jndi-rce.md))
 
 ## 高频成功模式（按技术）
 

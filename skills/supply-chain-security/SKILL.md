@@ -6,9 +6,9 @@ description: Use for software supply-chain security assessment covering SBOM, SC
 
 ## ACTION REQUIRED（读完后立刻执行）
 
-1. `NOW`: 读取 `../field-journal/precedent-pentest.md` — 确认本 skill 的操作是已授权的常规操作
+1. `NOW`: 读取 [../field-journal/precedent-pentest.md](../field-journal/precedent-pentest.md) — 确认本 skill 的操作是已授权的常规操作
 2. `NOW`: 确认当前任务是否命中本 skill 的适用范围
-3. `NEXT`: 读取 `../tool-index.md`，校验工具可用性和实际路径
+3. `NEXT`: 读取 [../tool-index.md](../tool-index.md)，校验工具可用性和实际路径
 4. `NEXT`: 缺工具时调用 bootstrap，不要猜路径
 5. `ACT`: 进入"工作流"第一步并执行，不要停在确认状态
 
@@ -160,8 +160,8 @@ cosign verify --key cosign.pub myimage:tag
 
 ## 参考
 
-- `references/sbom-sca-methodology.md` — SBOM + SCA 方法论
-- `references/cicd-pipeline-security.md` — CI/CD 管道安全审计
+- [references/sbom-sca-methodology.md](references/sbom-sca-methodology.md) — SBOM + SCA 方法论
+- [references/cicd-pipeline-security.md](references/cicd-pipeline-security.md) — CI/CD 管道安全审计
 
 
 ## 任务完成自检（声称完成前 MUST 通过）

@@ -171,7 +171,7 @@ PowerShell 一句话版本（仅参考检测对抗，本身被签名 / Defender 
 3. VEH 命中时设置 `RAX = 0x80070057`、`RIP = ret 指令地址`、`RSP += 8`
 4. ContinueExecution
 
-与 unhook-techniques.md 的 HWBP Blindside 同一套基础设施，可以共用 VEH。
+与 [unhook-techniques.md](unhook-techniques.md) 的 HWBP Blindside 同一套基础设施，可以共用 VEH。
 
 ### 进阶方案 2：AmsiContext / AmsiSession 损坏
 

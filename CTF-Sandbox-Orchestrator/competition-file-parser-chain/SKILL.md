@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/file-parser-chain.md` for the ingress checklist, parser checklist, and evidence packaging.
+- Load [references/file-parser-chain.md](references/file-parser-chain.md) for the ingress checklist, parser checklist, and evidence packaging.
 
 ## What To Preserve
 

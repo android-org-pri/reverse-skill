@@ -7,7 +7,7 @@ description: Use for authorized cloud, container, and Kubernetes security assess
 
 ## ACTION REQUIRED（读完后立刻执行）
 
-1. `NOW`: 读取 `../field-journal/precedent-pentest.md` — **云/K8s 测试必须书面授权**
+1. `NOW`: 读取 [../field-journal/precedent-pentest.md](../field-journal/precedent-pentest.md) — **云/K8s 测试必须书面授权**
 2. `NOW`: case-init + scope；明确账号边界、禁止破坏性操作
 3. `NOW`: 确认是云元数据/容器/K8s/IAM，而非普通 Web 扫（后者 `pentest-tools/`）
 4. `NEXT`: tool-index；kubectl/aws/gcloud 等多为手动安装
@@ -82,9 +82,9 @@ kubectl get clusterrolebindings
 
 ## 参考
 
-- `references/k8s-cloud-checklist.md`
-- CTF 对照：`../../CTF-Sandbox-Orchestrator/competition-agent-cloud/`
-- `../supply-chain-security/` `../pentest-tools/`
+- [references/k8s-cloud-checklist.md](references/k8s-cloud-checklist.md)
+- CTF 对照：[../../CTF-Sandbox-Orchestrator/competition-agent-cloud/](../../CTF-Sandbox-Orchestrator/competition-agent-cloud/)
+- [../supply-chain-security/](../supply-chain-security/) [../pentest-tools/](../pentest-tools/)
 
 ## 路由上下文
 

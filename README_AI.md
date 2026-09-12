@@ -14,12 +14,12 @@ AI Community: https://linux.do
 
 > **After the AI finishes reading this file, it must automatically execute the following configuration process and then report what was changed. The user does not need to operate manually.**
 
-> ⚠️ **FIRST-TIME SETUP:** `skills/tool-index.md` is gitignored and does NOT exist in the cloned repo until you generate it.  
-> **Before reading RULES.md**, you MUST first refresh the local tool index:  
+> ⚠️ **FIRST-TIME SETUP:** [skills/tool-index.md](skills/tool-index.md) is gitignored and does NOT exist in the cloned repo until you generate it.  
+> **Before reading [RULES.md](RULES.md)**, you MUST first refresh the local tool index:  
 > - Windows: `powershell -ExecutionPolicy Bypass -File skills/scripts/refresh-tool-index.ps1`  
 > - Linux/macOS: `bash skills/scripts/refresh-tool-index.sh`  
 > - Kali: `bash kali/scripts/refresh-tool-index.sh`  
-> This generates `skills/tool-index.md` and `skills/tool-index.json` for the current machine. Without this step, RULES.md will fail to read tool-index.md and routing will be broken.
+> This generates [skills/tool-index.md](skills/tool-index.md) and `skills/tool-index.json` for the current machine. Without this step, [RULES.md](RULES.md) will fail to read [tool-index.md](tool-index.md) and routing will be broken.
 
 ### Automatic Configuration Process
 
@@ -51,14 +51,14 @@ AI Community: https://linux.do
 
 | Detection result | Signal | Required deployment document | Detection / deployment entry |
 |---|---|---|---|
-| Windows | PowerShell, `$env:OS`, Windows paths | `README_AI.md` | `skills/scripts/master-route.ps1` / `case-init.ps1` / `bootstrap-reverse.ps1` / `refresh-tool-index.ps1` |
-| Kali Linux | `/etc/os-release` contains `kali` | `kali/README-kali.md` | `skills/scripts/master-route.sh` / `case-init.sh`; Kali bootstrap/refresh under `kali/scripts/` |
-| Ubuntu / Debian / Mint / Pop!_OS | `/etc/os-release` contains the distro ID | `docs/platforms/linux.md` | `skills/scripts/master-route.sh` / `case-init.sh` / `bootstrap-reverse.sh` / `refresh-tool-index.sh` |
-| macOS | `uname -s` = `Darwin` | `docs/platforms/macos.md` | `skills/scripts/master-route.sh` / `case-init.sh` / `bootstrap-reverse.sh` / `refresh-tool-index.sh` |
-| Other / unknown | Cannot identify confidently | `docs/PLATFORMS.md` | Choose the closest platform, then continue |
+| Windows | PowerShell, `$env:OS`, Windows paths | [README_AI.md](README_AI.md) | [skills/scripts/master-route.ps1](skills/scripts/master-route.ps1) / `case-init.ps1` / `bootstrap-reverse.ps1` / `refresh-tool-index.ps1` |
+| Kali Linux | `/etc/os-release` contains `kali` | [kali/README-kali.md](kali/README-kali.md) | [skills/scripts/master-route.sh](skills/scripts/master-route.sh) / `case-init.sh`; Kali bootstrap/refresh under [kali/scripts/](kali/scripts/) |
+| Ubuntu / Debian / Mint / Pop!_OS | `/etc/os-release` contains the distro ID | [docs/platforms/linux.md](docs/platforms/linux.md) | [skills/scripts/master-route.sh](skills/scripts/master-route.sh) / `case-init.sh` / `bootstrap-reverse.sh` / `refresh-tool-index.sh` |
+| macOS | `uname -s` = `Darwin` | [docs/platforms/macos.md](docs/platforms/macos.md) | [skills/scripts/master-route.sh](skills/scripts/master-route.sh) / `case-init.sh` / `bootstrap-reverse.sh` / `refresh-tool-index.sh` |
+| Other / unknown | Cannot identify confidently | [docs/PLATFORMS.md](docs/PLATFORMS.md) | Choose the closest platform, then continue |
 
-> RULES.md contains the full behavior chain (steps 0–14). After reading this file, first complete OS detection and platform-document routing, then read RULES.md and start executing. Do not stop at "configuration completed."
-> The configuration report can be output after platform detection and RULES.md loading, but it is not the endpoint—the endpoint is the user's task being actually completed.
+> [RULES.md](RULES.md) contains the full behavior chain (steps 0–14). After reading this file, first complete OS detection and platform-document routing, then read [RULES.md](RULES.md) and start executing. Do not stop at "configuration completed."
+> The configuration report can be output after platform detection and [RULES.md](RULES.md) loading, but it is not the endpoint—the endpoint is the user's task being actually completed.
 
 ### Example Report Format
 
@@ -94,10 +94,10 @@ It solves two problems:
 
 | Platform | Status | Entry |
 |---|---|---|
-| Windows | Full primary path | `README_AI.md`, `skills/scripts/master-route.ps1`, `case-init.ps1`, PowerShell bootstrap/refresh |
-| Kali Linux | Specialized support | `skills/scripts/master-route.sh`, `case-init.sh`, `kali/README-kali.md`, Kali bootstrap/refresh |
-| Ubuntu / Debian Linux | Generic support | `docs/platforms/linux.md`, `skills/scripts/master-route.sh`, `case-init.sh`, Bash bootstrap/refresh |
-| macOS | Generic support | `docs/platforms/macos.md`, `skills/scripts/master-route.sh`, `case-init.sh`, Bash bootstrap/refresh |
+| Windows | Full primary path | [README_AI.md](README_AI.md), [skills/scripts/master-route.ps1](skills/scripts/master-route.ps1), `case-init.ps1`, PowerShell bootstrap/refresh |
+| Kali Linux | Specialized support | [skills/scripts/master-route.sh](skills/scripts/master-route.sh), `case-init.sh`, [kali/README-kali.md](kali/README-kali.md), Kali bootstrap/refresh |
+| Ubuntu / Debian Linux | Generic support | [docs/platforms/linux.md](docs/platforms/linux.md), [skills/scripts/master-route.sh](skills/scripts/master-route.sh), `case-init.sh`, Bash bootstrap/refresh |
+| macOS | Generic support | [docs/platforms/macos.md](docs/platforms/macos.md), [skills/scripts/master-route.sh](skills/scripts/master-route.sh), `case-init.sh`, Bash bootstrap/refresh |
 
 Generic Linux/macOS users can run the core routing/case path without installing PowerShell:
 
@@ -174,7 +174,7 @@ If you also use the CTF knowledge base, it is recommended to place it under the 
 └── README_AI.md
 ```
 
-This allows the relative paths in `routing.md`, such as `../CTF-Sandbox-Orchestrator/...`, to resolve correctly from `skills/`.
+This allows the relative paths in `routing.md`, such as `../CTF-Sandbox-Orchestrator/...`, to resolve correctly from [skills/](skills/).
 
 > If you place `CTF-Sandbox-Orchestrator` outside this package, such as `F:\CTF-Sandbox-Orchestrator\`, you need to manually adjust the relative paths in `routing.md`.
 
@@ -185,12 +185,12 @@ This allows the relative paths in `routing.md`, such as `../CTF-Sandbox-Orchestr
 ### If You Only Want to Put the Skill Pack in Place First
 
 1. Put the whole directory somewhere you like, for example: `<package root>\`
-2. Go to `skills\SKILL.md`
+2. Go to [skills\SKILL.md](skills\SKILL.md)
 3. When handling a task, read files in this order:
    1. `SKILL.md`
    2. `routing.md`
    3. The `SKILL.md` in the corresponding subdirectory
-   4. Read `tool-index.md` only when you need to confirm local tools
+   4. Read [tool-index.md](tool-index.md) only when you need to confirm local tools
 
 ### If You Want Any Code CLI to Automatically Use This Routing
 
@@ -199,7 +199,7 @@ You need at least:
 - A code CLI that supports custom rules / system prompts / project instructions / hooks
 - A way to inject "read the routing file first for reverse-engineering tasks" into the model context
 - If direct external capabilities are needed, configure MCP or an equivalent tool bridge
-- This package's `SKILL.md`, `routing.md`, and `tool-index.md`
+- This package's `SKILL.md`, `routing.md`, and [tool-index.md](tool-index.md)
 
 If you already have Claude hooks, Codex CLI project instructions, Cursor Rules, Cline custom instructions, or Windsurf Rules, update any old paths inside them to the current installation path.
 
@@ -239,13 +239,13 @@ Full dependency table with paths in the original [README.md](README.md).
 
 ## Supported Scenarios by Default
 
-### Main Modules Under `skills\`
+### Main Modules Under [skills\](skills\)
 
 | Module | Directory | Main Purpose |
 |---|---|---|
 | Main controller entry | `SKILL.md` | Read the global map first, then decide which sub-skill to enter |
 | Routing table | `routing.md` | Dispatch by target type, user intent, and toolchain |
-| Tool index | `tool-index.md` | Check whether local tools exist, where they are, and which scripts call them |
+| Tool index | [tool-index.md](tool-index.md) | Check whether local tools exist, where they are, and which scripts call them |
 | APK reverse engineering | `apk-reverse\` | Unpack, jadx, smali, repackaging, Frida, native dispatch; optional licensed JEB Pro cross-check |
 | IDA Pro | `ida-reverse\` | Deep binary RE and `idapro_*` workflows |
 | Binary Ninja | `binary-ninja-reverse\` | HLIL/MLIL/LLIL, Python API, and optional loopback MCP integration |
@@ -297,10 +297,10 @@ Kali:           bash <SKILL_ROOT>/kali/scripts/refresh-tool-index.sh
 ```
 
 After success, check:
-- `skills\tool-index.md`
+- [skills\tool-index.md](skills\tool-index.md)
 - `skills\tool-index.json`
 
-> Important: `yes/no` in `tool-index.md` only represents the scan result on the current machine.
+> Important: `yes/no` in [tool-index.md](tool-index.md) only represents the scan result on the current machine.
 
 ### IDA Pro Chain
 
@@ -388,13 +388,13 @@ The bootstrap command enables bearer authentication for Anything Analyzer. It re
 
 No matter how you inject instructions, at minimum tell the AI about these three entry files:
 
-- `skills\SKILL.md`
-- `skills\routing.md`
-- `skills\tool-index.md`
+- [skills\SKILL.md](skills\SKILL.md)
+- [skills\routing.md](skills\routing.md)
+- [skills\tool-index.md](skills\tool-index.md)
 
 ### Claude Code
 
-Claude Code is the best fit for directly connecting this package. If you already have `.claude\settings.local.json`, `.claude\mcp.json`, `RULES.md`, or `route-reverse.ps1`, only update old paths to the current installation path.
+Claude Code is the best fit for directly connecting this package. If you already have `.claude\settings.local.json`, `.claude\mcp.json`, [RULES.md](RULES.md), or `route-reverse.ps1`, only update old paths to the current installation path.
 
 ### Codex CLI / Cursor / Cline / Windsurf / Others
 
@@ -414,8 +414,8 @@ The key is to inject: package path, key entry files, MCP addresses, and "route f
 - `D:\APP\IDA\`
 
 ### IDA Scripts
-- `skills\ida-reverse\scripts\start.ps1`
-- `skills\ida-reverse\scripts\open.ps1`
+- [skills\ida-reverse\scripts\start.ps1](skills\ida-reverse\scripts\start.ps1)
+- [skills\ida-reverse\scripts\open.ps1](skills\ida-reverse\scripts\open.ps1)
 
 ### Claude Local Hook
 If you have configured `.claude\settings.local.json` or `.claude\scripts\route-reverse.ps1`, update all old paths after migration.
@@ -477,7 +477,7 @@ Kali:           bash <your skill root>/kali/scripts/refresh-tool-index.sh
 **Q1: Can I put `skills` on another drive?**
 Yes, but update every absolute path that references it.
 
-**Q2: `tool-index.md` says `yes`; why still can't Claude call the tool?**
+**Q2: [tool-index.md](tool-index.md) says `yes`; why still can't Claude call the tool?**
 Because it only means the local machine has the executable. The tool may not be registered in MCP configuration.
 
 **Q3: Is IDA required?**
@@ -529,7 +529,7 @@ Before starting a new task, check `field-journal/_index.md`. If historical recor
 
 ## Complete Behavior Summary for the AI
 
-The complete behavior chain is defined in `RULES.md` under "Complete Behavior Chain (Canonical)" (steps 0–14).
+The complete behavior chain is defined in [RULES.md](RULES.md) under "Complete Behavior Chain (Canonical)" (steps 0–14).
 
 Core points:
 - **Step 0 (highest priority)**: read `precedent-auth.md` to confirm authorization context
@@ -573,7 +573,7 @@ When the AI tries to auto-complete installation and still fails, it **must not s
 
 ### Concrete Guidance for Each Capability
 
-The `README.md` contains full guidance for:
+The [README.md](README.md) contains full guidance for:
 - anything-analyzer installation failure
 - jshookmcp registration failure
 - idalib-mcp / IDA Pro service startup failure
@@ -589,11 +589,11 @@ When the MCP service port is different from the expected one, ask for the actual
 ## Important Files in This Package
 
 If you only read five files, read these first:
-1. `README.md` — Human introduction
-2. `RULES.md` — Global routing rules; any AI will auto-configure after reading it
+1. [README.md](README.md) — Human introduction
+2. [RULES.md](RULES.md) — Global routing rules; any AI will auto-configure after reading it
 3. `SKILL.md` — Main controller entry point
 4. `routing.md` — Scenario → skill dispatch
-5. `tool-index.md` — Local tool status
+5. [tool-index.md](tool-index.md) — Local tool status
 
 If the AI keeps re-confirming in an authorized lab, or stalls at disclaimers:
 6. `field-journal/precedent-auth.md` — Authorization context declaration
@@ -608,7 +608,7 @@ If adding a new skill:
 
 ## License
 
-This project (`reverse-skill`) is primarily licensed under the **MIT License**. CTF-Sandbox-Orchestrator/ is **GNU GPLv3**. Other tools (jadx, frida, nmap, burpsuite-mcp, etc.) are subject to their respective official licenses.
+This project (`reverse-skill`) is primarily licensed under the **MIT License**. [CTF-Sandbox-Orchestrator/](CTF-Sandbox-Orchestrator/) is **GNU GPLv3**. Other tools (jadx, frida, nmap, burpsuite-mcp, etc.) are subject to their respective official licenses.
 
 This package is intended only for legally authorized security research, learning, and CTF competitions.
 - Users must ensure all operations are within legal boundaries

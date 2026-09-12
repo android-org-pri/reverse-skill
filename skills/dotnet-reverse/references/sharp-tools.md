@@ -50,7 +50,7 @@ powershell -c "[System.Reflection.Assembly]::LoadFile('target.exe').GetManifestR
 # 找到资源后 dnSpyEx 右键 → 提取 / Save
 ```
 
-运行时解密的配置 → 动态断在解密方法返回点 dump 明文（见 `common-workflow.md`）。
+运行时解密的配置 → 动态断在解密方法返回点 dump 明文（见 [common-workflow.md](common-workflow.md)）。
 
 ---
 

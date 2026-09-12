@@ -66,6 +66,6 @@ Get-ChildItem -Recurse -Include *.ps1,*.sh,*.py,*.js | Select-Object FullName
 
 ## 7. 相关
 
-- 身份：`IDENTITY.md`  
-- 外部目录：`../references/community-security-skills.md`  
-- 授权：`scope-contract.md` + `field-journal/precedent-auth.md`  
+- 身份：[IDENTITY.md](IDENTITY.md)  
+- 外部目录：[../references/community-security-skills.md](../references/community-security-skills.md)  
+- 授权：[scope-contract.md](scope-contract.md) + `field-journal/precedent-auth.md`  

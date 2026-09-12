@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/firmware-layout.md` for the layout checklist, boot-chain checklist, and evidence packaging.
+- Load [references/firmware-layout.md](references/firmware-layout.md) for the layout checklist, boot-chain checklist, and evidence packaging.
 
 ## What To Preserve
 

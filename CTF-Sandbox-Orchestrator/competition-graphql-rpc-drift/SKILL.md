@@ -41,7 +41,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 ## Read This Reference
 
-- Load `references/graphql-rpc-drift.md` for the contract checklist, live-handler checklist, and evidence packaging.
+- Load [references/graphql-rpc-drift.md](references/graphql-rpc-drift.md) for the contract checklist, live-handler checklist, and evidence packaging.
 
 ## What To Preserve
 
